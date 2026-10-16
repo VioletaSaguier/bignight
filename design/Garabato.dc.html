@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Foto + garabato</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&amp;family=Inter+Tight:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1E44C8}a:hover{color:#132F8E}
+</style>
+</helmet>
+<div style="width: 390px; height: 1400px; box-sizing: border-box; background: #EFEDE8; color: #1A1A1A; font-family: 'Inter Tight', sans-serif; position: relative; overflow: hidden">
+<div style="padding: 36px 24px 120px; display: flex; flex-direction: column; gap: 26px">
+
+<div style="position: relative; padding-top: 20px">
+<div style="font-family: 'Permanent Marker', cursive; font-size: 46px; line-height: 0.95; color: {{blue}}; transform: rotate(-4deg); position: relative; z-index: 1">Save<br><span style="padding-left: 60px">the Date</span></div>
+<div style="margin-top: -18px; margin-left: 30px; width: 280px; height: 300px; background: linear-gradient(160deg, #8A8A86, #3C3C3A); display: flex; align-items: center; justify-content: center; color: #E6E6E2; font-size: 13px; filter: grayscale(1)">foto en blanco y negro</div>
+<svg width="70" height="70" viewBox="0 0 70 70" fill="none" stroke="{{blue}}" stroke-width="3" stroke-linecap="round" aria-hidden="true" style="position: absolute; right: 2px; top: 150px"><path d="M35 6 L39 30 L62 35 L39 40 L35 64 L31 40 L8 35 L31 30 Z"/></svg>
+<svg width="90" height="60" viewBox="0 0 90 60" fill="none" stroke="{{blue}}" stroke-width="3" stroke-linecap="round" aria-hidden="true" style="position: absolute; left: 0; bottom: -10px"><path d="M6 40 C20 10 40 56 52 26 C60 8 76 18 84 30"/></svg>
+</div>
+
+<div style="text-align: center; display: flex; flex-direction: column; gap: 6px">
+<div style="font-family: 'Permanent Marker', cursive; font-size: 30px; color: {{blue}}">03 · 20 · 2027</div>
+<div style="font-size: 14px">Clau &amp; Shawn se casan · Quinta [NOMBRE], Escobar</div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<a href="#" style="text-align: center; font-weight: 500; font-size: 15px; padding: 15px; border: 2px solid #1A1A1A; border-radius: 999px; text-decoration: none; color: #1A1A1A">Confirmo</a>
+<a href="Regalos.dc.html" style="text-align: center; font-weight: 500; font-size: 15px; padding: 15px; background: {{blue}}; color: #FFFFFF; border-radius: 999px; text-decoration: none">Regalar</a>
+</div>
+
+<section style="background: #FFFFFF; border-radius: 18px; padding: 18px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: baseline"><span style="font-family: 'Permanent Marker', cursive; font-size: 24px; color: {{blue}}">Regalanos</span><a href="Regalos.dc.html" style="font-size: 14px; padding: 8px 0">ver todos</a></div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<a href="Regalos.dc.html" style="display: flex; flex-direction: column; gap: 6px; text-decoration: none; color: #1A1A1A"><div style="height: 96px; border-radius: 12px; background: #D5DAE8"></div><span style="font-size: 14px">Tatuaje de pareja</span><span style="font-size: 14px; font-weight: 500">$ 60.000</span></a>
+<a href="Regalos.dc.html" style="display: flex; flex-direction: column; gap: 6px; text-decoration: none; color: #1A1A1A"><div style="height: 96px; border-radius: 12px; background: #E3DCCF"></div><span style="font-size: 14px">Recital en Madrid</span><span style="font-size: 14px; font-weight: 500">$ 210.000</span></a>
+</div>
+<div style="font-size: 13px; color: #55524C">En pesos · también podés pagar en dólares</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.5">
+<div><strong style="font-weight: 500">16 h</strong> ceremonia en el jardín</div>
+<div><strong style="font-weight: 500">18 h</strong> fiesta hasta que se apague todo</div>
+<div><strong style="font-weight: 500">Dress code</strong> elegante, con zapatillas permitidas</div>
+</section>
+</div>
+<div style="position: absolute; left: 0; right: 0; bottom: 0; padding: 12px 16px 20px; background: #EFEDE8; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<a href="#" style="text-align: center; font-weight: 500; font-size: 15px; padding: 14px; border: 2px solid #1A1A1A; border-radius: 999px; text-decoration: none; color: #1A1A1A">Confirmo</a>
+<a href="Regalos.dc.html" style="text-align: center; font-weight: 500; font-size: 15px; padding: 14px; background: {{blue}}; color: #FFFFFF; border-radius: 999px; text-decoration: none">Regalar</a>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"blue":{"editor":"color","default":"#1E44C8","options":["#1E44C8","#D4301F","#1F7A4D"]},"$preview":{"width":390,"height":1400}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { blue: this.props.blue ?? '#1E44C8' };
+  }
+}
+</script>
+</body>
+</html>

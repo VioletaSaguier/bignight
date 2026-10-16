@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Cuaderno ilustrado</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2948A8}a:hover{color:#1B3178}
+</style>
+</helmet>
+<div style="width: 390px; min-height: 1200px; box-sizing: border-box; background: #FAF7F0; color: {{ink}}; font-family: 'Newsreader', serif; padding: 32px 26px 40px; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center">
+<svg width="300" height="150" viewBox="0 0 300 150" aria-hidden="true" fill="none" stroke="{{ink}}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M70 140 V70 L150 22 L230 70 V140 Z"/><path d="M60 76 L150 18 L240 76"/><path d="M130 140 V100 H170 V140"/><path d="M90 86 H114 V108 H90 Z M186 86 H210 V108 H186 Z"/><path d="M200 40 V22 H214 V50"/><path d="M20 140 C24 110 40 108 44 140 M32 140 V112 M256 140 C260 104 280 104 284 140 M270 140 V110"/><path d="M8 140 H292"/></svg>
+<div style="font-family: 'Caveat', cursive; font-weight: 500; font-size: 24px">te esperamos en la quinta</div>
+<h1 style="margin: 0; font-family: 'Caveat', cursive; font-weight: 700; font-size: 74px; line-height: 0.9">Flor y Pedro</h1>
+<div style="font-style: italic; font-size: 18px">sábado 4 de diciembre · Pilar</div>
+</div>
+<section style="display: flex; flex-direction: column; gap: 14px">
+<div style="display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 12px; align-items: center">
+<svg width="56" height="48" viewBox="0 0 56 48" aria-hidden="true" fill="none" stroke="{{ink}}" stroke-width="1.6" stroke-linecap="round"><path d="M14 4 H26 L24 20 C23 26 17 26 16 20 Z M20 24 V42 M14 44 H26"/><path d="M32 4 H44 L42 20 C41 26 35 26 34 20 Z M38 24 V42 M32 44 H44"/></svg>
+<div><div style="font-family: 'Caveat', cursive; font-size: 28px; line-height: 1">17:30 · Ceremonia</div><div style="font-size: 15px">en el jardín, debajo del ombú</div></div>
+</div>
+<div style="display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 12px; align-items: center">
+<svg width="56" height="48" viewBox="0 0 56 48" aria-hidden="true" fill="none" stroke="{{ink}}" stroke-width="1.6" stroke-linecap="round"><path d="M6 32 H50 V22 L40 20 L34 10 H18 L12 20 L6 22 Z"/><circle cx="16" cy="34" r="5"/><circle cx="40" cy="34" r="5"/></svg>
+<div><div style="font-family: 'Caveat', cursive; font-size: 28px; line-height: 1">Traslado</div><div style="font-size: 15px">sale una combi de Plaza Italia a las 16 h</div></div>
+</div>
+<div style="display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 12px; align-items: center">
+<svg width="56" height="48" viewBox="0 0 56 48" aria-hidden="true" fill="none" stroke="{{ink}}" stroke-width="1.6" stroke-linecap="round"><circle cx="28" cy="20" r="14"/><path d="M14 20 H42 M28 6 C20 14 20 26 28 34 C36 26 36 14 28 6 M28 34 V44"/></svg>
+<div><div style="font-family: 'Caveat', cursive; font-size: 28px; line-height: 1">21:00 · Fiesta</div><div style="font-size: 15px">bola de espejos incluida</div></div>
+</div>
+</section>
+<section style="border: 1.6px solid {{ink}}; border-radius: 18px 4px 18px 4px; padding: 20px; display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0; font-family: 'Caveat', cursive; font-weight: 700; font-size: 38px; line-height: 1">¿Venís?</h2>
+<label style="display: flex; flex-direction: column; gap: 4px; font-size: 15px">Tu nombre<input type="text" placeholder="como te dicen" style="font: inherit; font-size: 17px; padding: 10px 0; border: none; border-bottom: 1.6px dashed {{ink}}; background: transparent; color: {{ink}}"></label>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<button type="button" style="font-family: 'Caveat', cursive; font-weight: 700; font-size: 24px; padding: 10px; border: 1.6px solid {{ink}}; border-radius: 12px; background: {{ink}}; color: #FAF7F0">¡Sí!</button>
+<button type="button" style="font-family: 'Caveat', cursive; font-weight: 700; font-size: 24px; padding: 10px; border: 1.6px solid {{ink}}; border-radius: 12px; background: transparent; color: {{ink}}">No llego</button>
+</div>
+</section>
+<a href="Regalos.dc.html" style="align-self: center; font-family: 'Caveat', cursive; font-weight: 700; font-size: 28px; padding: 8px 0">ver la lista de regalos →</a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"ink":{"editor":"color","default":"#2948A8","options":["#2948A8","#4F6B4A","#2B2B2B"]},"$preview":{"width":390,"height":1200}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { ink: this.props.ink ?? '#2948A8' };
+  }
+}
+</script>
+</body>
+</html>

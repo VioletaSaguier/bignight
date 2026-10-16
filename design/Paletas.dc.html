@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Paletas minimal</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&amp;family=Instrument+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 1000px; height: 1400px; box-sizing: border-box; background: #F4F1EC; color: #1B1A1F; font-family: 'Instrument Sans', sans-serif; padding: 56px; display: flex; flex-direction: column; gap: 22px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<h2 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 400; font-size: 44px; line-height: 1.05">Cada estilo minimal, en cinco paletas</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.5; color: #3D3942; max-width: 760px">Quien organiza elige la paleta con un toque y la página cambia entera: fondo, tinta del dibujo, botones y barra fija. En el canvas también podés probarlas desde Tweaks de cada tablero.</p>
+</div>
+<sc-for list="{{styles}}" as="s" hint-placeholder-count="8">
+<div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 16px; align-items: center; background: #FFFFFF; border-radius: 16px; padding: 14px 18px">
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 600; font-size: 16px">{{s.name}}</span><span style="font-size: 13px; color: #5A5560">{{s.label}}</span></div>
+<div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px">
+<sc-for list="{{s.pals}}" as="p" hint-placeholder-count="5">
+<div style="display: flex; flex-direction: column; gap: 6px; align-items: center">
+<div style="{{p.chip}}"><span style="{{p.ink}}"></span><span style="{{p.line}}"></span></div>
+<span style="font-size: 12px">{{p.n}}</span>
+</div>
+</sc-for>
+</div>
+</div>
+</sc-for>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1000,"height":1400}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const S = [
+      ['Paisaje a línea', 'Sección «Regalos»', [['Tinta', '#F7F4EC', '#2A2A26'], ['Oliva', '#F2F0E4', '#4A5A33'], ['Terracota', '#F8EEE4', '#9C4528'], ['Azul toscano', '#F1F3F2', '#2B4A8C'], ['Ciruela', '#F5EEF0', '#6B2E4A']]],
+      ['Susurro', 'Sección «Mesa de regalos»', [['Arena', '#E3DBCF', '#3F3A33'], ['Niebla', '#ECEDEB', '#2F3437'], ['Salvia', '#DDE2D3', '#34402F'], ['Rosa seco', '#EAD9D3', '#5A3A36'], ['Noche', '#23252B', '#E7E2D8']]],
+      ['Línea · Viñedo', 'Sección «Mesa de regalos»', [['Malbec', '#F5EFEB', '#5E1F2E'], ['Tinta', '#F7F4EC', '#2A2A26'], ['Oliva', '#F2F0E4', '#4A5A33'], ['Terracota', '#F8EEE4', '#9C4528'], ['Azul toscano', '#F1F3F2', '#2B4A8C']]],
+      ['Línea · Ciudad', 'Sección «Gift shop»', [['Tinta', '#F6F4EF', '#22221F'], ['Azul toscano', '#F1F3F2', '#2B4A8C'], ['Ciruela', '#F5EEF0', '#6B2E4A'], ['Oliva', '#F2F0E4', '#4A5A33'], ['Noche', '#1F2126', '#E9E4D8']]],
+      ['Línea · Costa', 'Sección «Regalanos»', [['Océano', '#F1F4F5', '#1F4E6E'], ['Arena', '#F4EDE1', '#6A5236'], ['Coral', '#FAF0EA', '#B4492F'], ['Salvia', '#EEF1E8', '#46593F'], ['Tinta', '#F7F4EC', '#2A2A26']]],
+      ['Línea · Estancia', 'Sección «Regalos»', [['Pampa', '#F3F0E3', '#3E4C2E'], ['Cuero', '#F5ECE0', '#7A4A28'], ['Tinta', '#F7F4EC', '#2A2A26'], ['Azul toscano', '#F1F3F2', '#2B4A8C'], ['Ciruela', '#F5EEF0', '#6B2E4A']]],
+      ['Línea · Capilla', 'Sección «Mesa de regalos»', [['Marfil', '#FAF7F0', '#6D5B3E'], ['Azul noche', '#F1F2F5', '#1F2D4E'], ['Salvia', '#EEF1E8', '#46593F'], ['Rosa seco', '#F6ECE8', '#7A4A45'], ['Tinta', '#F7F4EC', '#2A2A26']]],
+      ['Línea · Rama de olivo', 'Sección «Lista de regalos»', [['Olivo', '#F4F3EC', '#55633C'], ['Tinta', '#F7F4EC', '#2A2A26'], ['Terracota', '#F8EEE4', '#9C4528'], ['Azul toscano', '#F1F3F2', '#2B4A8C'], ['Lavanda', '#F4F1F6', '#5B4A7A']]]
+    ];
+    return {
+      styles: S.map(([name, label, pals]) => ({
+        name, label,
+        pals: pals.map(([n, bg, ink]) => ({
+          n,
+          chip: 'width: 100%; height: 72px; border-radius: 12px; border: 1px solid #DDD7CC; background: ' + bg + '; display: flex; align-items: center; justify-content: center; gap: 8px',
+          ink: 'width: 26px; height: 26px; border-radius: 50%; background: ' + ink,
+          line: 'width: 40px; height: 2px; background: ' + ink
+        }))
+      }))
+    };
+  }
+}
+</script>
+</body>
+</html>

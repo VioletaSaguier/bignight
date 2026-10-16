@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Firma roja</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#B4231F}a:hover{color:#861915}
+</style>
+</helmet>
+<div style="width: 390px; height: 1400px; box-sizing: border-box; background: #EDE8E0; color: #2B2926; font-family: 'IBM Plex Mono', monospace; position: relative; overflow: hidden">
+<div style="padding: 48px 28px 120px; display: flex; flex-direction: column; gap: 32px">
+
+<div style="display: flex; flex-direction: column; gap: 0">
+<div style="font-family: 'Mrs Saint Delafield', cursive; font-size: 110px; line-height: 0.78; color: {{ink}}; transform: rotate(-6deg); transform-origin: left">Nos</div>
+<div style="font-family: 'Mrs Saint Delafield', cursive; font-size: 110px; line-height: 0.78; color: {{ink}}; transform: rotate(-6deg); transform-origin: left; padding-left: 40px">casamos,</div>
+<div style="font-family: 'Mrs Saint Delafield', cursive; font-size: 110px; line-height: 0.78; color: {{ink}}; transform: rotate(-6deg); transform-origin: left; padding-left: 10px">vení a brindar</div>
+</div>
+<div style="height: 1px; background: #2B2926; margin-top: 12px"></div>
+<div style="text-align: center; font-size: 13px; letter-spacing: 0.3em; line-height: 2">SÁBADO 23 DE OCTUBRE · 12 H<br>CASA [NOMBRE] · PALERMO<br>CAMI &amp; TOMÁS</div>
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<a href="#" style="text-align: center; font-size: 12px; letter-spacing: 0.2em; padding: 16px 6px; border: 1px solid #2B2926; color: #2B2926; text-decoration: none">CONFIRMAR</a>
+<a href="Regalos.dc.html" style="text-align: center; font-size: 12px; letter-spacing: 0.2em; padding: 16px 6px; background: {{ink}}; color: #EDE8E0; text-decoration: none">REGALANOS</a>
+</div>
+
+<section style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-family: 'Mrs Saint Delafield', cursive; font-size: 52px; line-height: 1; color: {{ink}}">regalanos</div>
+<a href="Regalos.dc.html" style="display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid #C9C1B4; font-size: 14px; color: #2B2926; text-decoration: none"><span>Vino para la noche de bodas</span><span>45.000</span></a>
+<a href="Regalos.dc.html" style="display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid #C9C1B4; font-size: 14px; color: #2B2926; text-decoration: none"><span>Cena en Lisboa</span><span>180.000</span></a>
+<a href="Regalos.dc.html" style="display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid #C9C1B4; font-size: 14px; color: #2B2926; text-decoration: none"><span>Pasajes (compartido)</span><span>a voluntad</span></a>
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px"><span style="font-size: 11px; line-height: 1.5">AR$ · también en USD</span><a href="Regalos.dc.html" style="font-size: 12px; letter-spacing: 0.2em; padding: 12px 0">VER LOS 20 →</a></div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 10px; font-size: 13px; line-height: 1.8">
+<div style="letter-spacing: 0.3em; color: {{ink}}">EL DÍA</div>
+<div>12:00 — civil y brindis<br>13:00 — almuerzo largo<br>17:00 — sobremesa con música</div>
+<div style="letter-spacing: 0.3em; color: {{ink}}; margin-top: 8px">DRESS CODE</div>
+<div>Cocktail. Algo rojo, si te animás.</div>
+</section>
+
+</div>
+<div style="position: absolute; left: 0; right: 0; bottom: 0; padding: 12px 16px 20px; background: #EDE8E0; border-top: 1px solid #2B2926; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<a href="#" style="text-align: center; font-size: 12px; letter-spacing: 0.2em; padding: 14px 4px; border: 1px solid #2B2926; color: #2B2926; text-decoration: none">CONFIRMAR</a>
+<a href="Regalos.dc.html" style="text-align: center; font-size: 12px; letter-spacing: 0.2em; padding: 14px 4px; background: {{ink}}; color: #EDE8E0; text-decoration: none">REGALAR</a>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"ink":{"editor":"color","default":"#B4231F","options":["#B4231F","#1F3FBF","#2B2926"]},"$preview":{"width":390,"height":1400}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { ink: this.props.ink ?? '#B4231F' };
+  }
+}
+</script>
+</body>
+</html>

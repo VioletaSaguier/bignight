@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Editorial minimal</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F3FBF}a:hover{color:#132A85}
+</style>
+</helmet>
+<div style="width: 390px; min-height: 1200px; box-sizing: border-box; background: #FBFAF7; color: #151515; font-family: 'Geist', sans-serif; padding: 28px 24px 40px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; justify-content: space-between; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase"><span>M &amp; J</span><span>Edición única</span></div>
+<div style="display: flex; flex-direction: column; gap: 0">
+<div style="font-family: 'Instrument Serif', serif; font-size: 168px; line-height: 0.82; letter-spacing: -0.04em">28</div>
+<div style="font-family: 'Instrument Serif', serif; font-size: 168px; line-height: 0.82; letter-spacing: -0.04em; color: {{accent}}">06</div>
+<div style="font-family: 'Instrument Serif', serif; font-size: 168px; line-height: 0.82; letter-spacing: -0.04em">27</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; border-top: 1px solid #151515; padding-top: 16px">
+<div style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 34px; line-height: 1">Mica<br>y Juan</div>
+<p style="margin: 0; font-size: 13px; line-height: 1.5">se casan un domingo a la tarde en [LUGAR], Colegiales. Ceremonia corta, mesa larga.</p>
+</div>
+<div style="height: 260px; background: #E7E4DD; display: flex; align-items: flex-end; padding: 12px; font-size: 12px; color: #55524C">Foto en blanco y negro</div>
+<section style="display: flex; flex-direction: column; border-top: 1px solid #151515">
+<div style="display: grid; grid-template-columns: 80px minmax(0, 1fr); padding: 14px 0; border-bottom: 1px solid #D6D2C8; font-size: 15px"><span style="color: #55524C">17:00</span><span>Ceremonia</span></div>
+<div style="display: grid; grid-template-columns: 80px minmax(0, 1fr); padding: 14px 0; border-bottom: 1px solid #D6D2C8; font-size: 15px"><span style="color: #55524C">18:30</span><span>Cena</span></div>
+<div style="display: grid; grid-template-columns: 80px minmax(0, 1fr); padding: 14px 0; border-bottom: 1px solid #D6D2C8; font-size: 15px"><span style="color: #55524C">Dress</span><span>Formal, tonos neutros</span></div>
+</section>
+<section style="display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 40px">¿Asistirás?</h2>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<button type="button" style="font: inherit; font-size: 15px; padding: 15px; border: 1px solid #151515; background: #151515; color: #FBFAF7">Confirmo</button>
+<button type="button" style="font: inherit; font-size: 15px; padding: 15px; border: 1px solid #151515; background: transparent; color: #151515">No podré</button>
+</div>
+</section>
+<a href="Regalos.dc.html" style="display: flex; justify-content: space-between; align-items: center; padding: 18px 0; border-top: 1px solid #151515; border-bottom: 1px solid #151515; text-decoration: none; font-size: 16px"><span>Mesa de regalos</span><span>→</span></a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#1F3FBF","options":["#1F3FBF","#151515","#B4321F"]},"$preview":{"width":390,"height":1200}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#1F3FBF' };
+  }
+}
+</script>
+</body>
+</html>

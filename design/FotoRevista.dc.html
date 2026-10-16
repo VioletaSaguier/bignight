@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Foto · Revista</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="{{root}}">
+<div style="padding: 22px 20px 120px; display: flex; flex-direction: column; gap: 22px">
+<div style="display: flex; justify-content: space-between; font-size: 11px; letter-spacing: 0.12em"><span>M &amp; J</span><span>N.º 01 · EDICIÓN ÚNICA</span></div>
+<div style="position: relative">
+<svg width="350" height="440" viewBox="0 0 350 440" aria-hidden="true" style="{{filter}}"><rect width="350" height="440" fill="#C7BFB2"/><circle cx="150" cy="150" r="44" fill="#7F786F"/><circle cx="214" cy="166" r="40" fill="#9A9187"/><path d="M60 440 C60 290 100 210 150 210 C200 210 214 320 214 440 Z" fill="#4F4943"/><path d="M168 440 C168 300 186 228 218 228 C266 228 300 320 300 440 Z" fill="#E1DBD2"/></svg>
+<div style="position: absolute; left: 10px; bottom: 10px; font-size: 11px; background: rgba(255,255,255,0.8); color: #151515; padding: 5px 9px">su foto</div>
+</div>
+<div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: end; border-bottom: 1px solid {{ink}}; padding-bottom: 14px">
+<h1 style="margin: 0; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 56px; line-height: 0.9">Mica<br><span style="font-style: italic">&amp; Juan</span></h1>
+<div style="font-family: 'Instrument Serif', serif; font-size: 40px; line-height: 0.9; text-align: right">28<br>06</div>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.55">Se casan un domingo a la tarde en [LUGAR], Colegiales. Ceremonia corta, mesa larga y baile.</p>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<a href="#" style="{{ghost}}">Confirmo</a>
+<a href="Regalos.dc.html" style="{{solid}}">Gift shop</a>
+</div>
+<section style="display: flex; flex-direction: column; gap: 0">
+<div style="display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 8px"><span style="font-family: 'Instrument Serif', serif; font-size: 30px">Gift shop</span><span style="font-size: 12px">en pesos · también USD</span></div>
+<a href="Regalos.dc.html" style="{{row}}"><span>01 · Vermut en Madrid</span><span>$ 40.000</span></a>
+<a href="Regalos.dc.html" style="{{row}}"><span>02 · Tarde de museo</span><span>$ 95.000</span></a>
+<a href="Regalos.dc.html" style="{{row}}"><span>03 · Hotel en Lisboa · compartido</span><span>58%</span></a>
+<a href="Regalos.dc.html" style="{{link}}">Ver todo →</a>
+</section>
+</div>
+<div style="{{bar}}">
+<a href="#" style="{{ghost}}">Confirmo</a>
+<a href="Regalos.dc.html" style="{{solid}}">Gift shop</a>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"palette":{"editor":"enum","default":"Papel","options":["Papel","Cobalto","Rojo","Noche"]},"filtro":{"editor":"enum","default":"Blanco y negro","options":["Blanco y negro","Color","Sepia"]},"$preview":{"width":390,"height":1400}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const P = { 'Papel': ['#FBFAF7', '#151515', '#151515'], 'Cobalto': ['#FBFAF7', '#151515', '#1F3FBF'], 'Rojo': ['#F6F1EA', '#151515', '#B4321F'], 'Noche': ['#151515', '#F1EEE8', '#F1EEE8'] };
+    const [bg, ink, acc] = P[this.props.palette] || P['Papel'];
+    const f = { 'Blanco y negro': 'grayscale(1)', 'Color': 'none', 'Sepia': 'sepia(0.7)' }[this.props.filtro] || 'grayscale(1)';
+    const b = 'text-align: center; font-family: inherit; font-weight: 500; font-size: 15px; padding: 15px 6px; text-decoration: none; ';
+    return {
+      ink,
+      root: 'width: 390px; height: 1400px; box-sizing: border-box; background: ' + bg + '; color: ' + ink + '; font-family: \'Geist\', sans-serif; position: relative; overflow: hidden',
+      filter: 'display: block; width: 100%; height: auto; filter: ' + f,
+      ghost: b + 'border: 1px solid ' + ink + '; color: ' + ink + ';',
+      solid: b + 'background: ' + acc + '; color: ' + bg + ';',
+      row: 'display: flex; justify-content: space-between; gap: 10px; padding: 12px 0; border-top: 1px solid ' + ink + '; font-size: 15px; text-decoration: none; color: ' + ink,
+      link: 'align-self: flex-end; font-size: 14px; padding: 12px 0; border-top: 1px solid ' + ink + '; width: 100%; text-align: right; color: ' + ink,
+      bar: 'position: absolute; left: 0; right: 0; bottom: 0; padding: 12px 16px 20px; background: ' + bg + '; border-top: 1px solid ' + ink + '; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px'
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Línea · Viñedo</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&amp;family=Jost:wght@400&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="{{root}}">
+<div style="padding: 56px 30px 120px; display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center">
+<svg width="300" height="130" viewBox="0 0 300 130" fill="none" stroke="{{ink}}" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 40 C60 20 110 30 150 22 C200 12 250 26 298 18"/><path d="M110 70 H190 V46 L150 28 L110 46 Z M140 70 V56 H160 V70 M118 50 H182"/><path d="M2 128 L120 74 M30 128 L130 76 M70 128 L140 78 M110 128 L148 80 M150 128 L152 80 M190 128 L158 80 M230 128 L164 78 M270 128 L172 76 M298 118 L182 74"/><circle cx="252" cy="34" r="7"/></svg>
+<div style="font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.34em">NOS CASAMOS ENTRE VIÑEDOS</div>
+<h1 style="margin: 0; font-weight: 400; font-size: 54px; line-height: 0.95; font-style: italic">Flor<br><span style="font-size: 30px">y</span> Joaquín</h1>
+<div style="font-size: 19px">sábado 6 de noviembre · 18 h<br><span style="font-style: italic">Bodega [NOMBRE], Luján de Cuyo</span></div>
+<div style="width: 100%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<a href="#" style="{{ghost}}">Confirmar</a>
+<a href="Regalos.dc.html" style="{{solid}}">Mesa de regalos</a>
+</div>
+<section style="width: 100%; display: flex; flex-direction: column; gap: 4px">
+<div style="font-style: italic; font-size: 24px; margin-bottom: 6px">mesa de regalos</div>
+<a href="Regalos.dc.html" style="{{row}}"><span>Cata para dos</span><span>$ 65.000</span></a>
+<a href="Regalos.dc.html" style="{{row}}"><span>Cabalgata al atardecer</span><span>$ 140.000</span></a>
+<a href="Regalos.dc.html" style="{{row}}"><span>Noche en la posada</span><span>$ 320.000</span></a>
+<div style="display: flex; justify-content: space-between; align-items: center; padding-top: 6px; font-family: 'Jost', sans-serif; font-size: 12px"><span>En pesos · también en dólares</span><a href="Regalos.dc.html" style="{{link}}">Ver todos →</a></div>
+</section>
+<div style="font-size: 17px; line-height: 1.7"><span style="font-style: italic">ceremonia</span> entre las hileras<br><span style="font-style: italic">cena</span> en la galería de barricas<br><span style="font-style: italic">vestimenta</span> formal, tonos tierra</div>
+</div>
+<div style="{{bar}}">
+<a href="#" style="{{ghost}}">Confirmar</a>
+<a href="Regalos.dc.html" style="{{solid}}">Regalos</a>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"palette":{"editor":"enum","default":"Malbec","options":["Malbec","Tinta","Oliva","Terracota","Azul toscano"]},"$preview":{"width":390,"height":1400}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const P = { 'Malbec': ['#F5EFEB', '#5E1F2E'], 'Tinta': ['#F7F4EC', '#2A2A26'], 'Oliva': ['#F2F0E4', '#4A5A33'], 'Terracota': ['#F8EEE4', '#9C4528'], 'Azul toscano': ['#F1F3F2', '#2B4A8C'] };
+    const [bg, ink] = P[this.props.palette] || P['Malbec'];
+    const b = 'text-align: center; font-family: inherit; font-size: 17px; padding: 14px 6px; text-decoration: none; ';
+    return {
+      ink,
+      root: 'width: 390px; height: 1400px; box-sizing: border-box; background: ' + bg + '; color: ' + ink + '; font-family: \'Cormorant Garamond\', serif; position: relative; overflow: hidden',
+      ghost: b + 'border: 1px solid ' + ink + '; color: ' + ink + ';',
+      solid: b + 'background: ' + ink + '; color: ' + bg + ';',
+      row: 'display: flex; justify-content: space-between; padding: 11px 0; border-bottom: 1px solid ' + ink + '33; font-size: 18px; text-decoration: none; color: ' + ink,
+      link: 'padding: 10px 0; color: ' + ink,
+      bar: 'position: absolute; left: 0; right: 0; bottom: 0; padding: 12px 16px 20px; background: ' + bg + '; border-top: 1px solid ' + ink + '; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px'
+    };
+  }
+}
+</script>
+</body>
+</html>

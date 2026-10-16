@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Susurro</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&amp;family=Jost:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="{{rootStyle}}">
+<div style="padding: 120px 40px 120px; display: flex; flex-direction: column; align-items: center; gap: 56px; text-align: center">
+
+<div style="display: flex; flex-direction: column; align-items: center; gap: 18px">
+<div style="font-size: 10px; letter-spacing: 0.4em">JUNTO A SUS FAMILIAS</div>
+<div style="font-size: 13px; letter-spacing: 0.42em; line-height: 2.4">FLORENCIA<br>&amp;<br>JOAQUÍN</div>
+<div style="{{rule}}"></div>
+<div style="font-size: 10px; letter-spacing: 0.4em; line-height: 2">06 · 11 · 27<br>BODEGA [NOMBRE] · MENDOZA</div>
+</div>
+
+<div style="width: 100%; display: flex; flex-direction: column; gap: 10px">
+<a href="#" style="{{ghostBtn}}">CONFIRMAR</a>
+<a href="Regalos.dc.html" style="{{solidBtn}}">MESA DE REGALOS</a>
+</div>
+
+<section style="width: 100%; display: flex; flex-direction: column; gap: 18px">
+<div style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 22px">mesa de regalos</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px">
+<a href="Regalos.dc.html" style="{{card}}"><div style="{{img1}}"></div><span style="font-size: 10px; letter-spacing: 0.2em">CATA</span><span style="font-family: 'Cormorant Garamond', serif; font-size: 16px">$ 65.000</span></a>
+<a href="Regalos.dc.html" style="{{card}}"><div style="{{img2}}"></div><span style="font-size: 10px; letter-spacing: 0.2em">CABALGATA</span><span style="font-family: 'Cormorant Garamond', serif; font-size: 16px">$ 140.000</span></a>
+<a href="Regalos.dc.html" style="{{card}}"><div style="{{img3}}"></div><span style="font-size: 10px; letter-spacing: 0.2em">ESTADÍA</span><span style="font-family: 'Cormorant Garamond', serif; font-size: 16px">$ 320.000</span></a>
+</div>
+<div style="font-size: 9px; letter-spacing: 0.3em">EN PESOS · TAMBIÉN EN DÓLARES</div>
+<a href="Regalos.dc.html" style="{{link}}">VER TODOS</a>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 14px; font-size: 10px; letter-spacing: 0.32em; line-height: 2.2">
+<div>CEREMONIA 18 H<br>CENA ENTRE VIÑEDOS 20 H</div>
+<div style="{{shortRule}}"></div>
+<div>VESTIMENTA FORMAL<br>TONOS TIERRA</div>
+</section>
+
+</div>
+<div style="{{barStyle}}">
+<a href="#" style="{{ghostBtn}}">CONFIRMAR</a>
+<a href="Regalos.dc.html" style="{{solidBtn}}">REGALOS</a>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"palette":{"editor":"enum","default":"Arena","options":["Arena","Niebla","Salvia","Rosa seco","Noche"]},"$preview":{"width":390,"height":1400}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const P = {
+      'Arena': { bg: '#E3DBCF', ink: '#3F3A33', t: ['#CFC4B4', '#C7BBA9', '#BFB29F'] },
+      'Niebla': { bg: '#ECEDEB', ink: '#2F3437', t: ['#D7D9D6', '#CDD0CD', '#C2C6C3'] },
+      'Salvia': { bg: '#DDE2D3', ink: '#34402F', t: ['#C7CFBA', '#BCC5AD', '#B0BAA0'] },
+      'Rosa seco': { bg: '#EAD9D3', ink: '#5A3A36', t: ['#DCC3BB', '#D2B5AC', '#C7A79D'] },
+      'Noche': { bg: '#23252B', ink: '#E7E2D8', t: ['#3A3D45', '#44474F', '#4F525A'] }
+    };
+    const p = P[this.props.palette] || P['Arena'];
+    const btn = 'text-align: center; font-family: inherit; font-size: 10px; letter-spacing: 0.36em; padding: 16px 0; text-decoration: none; ';
+    const img = (c) => 'aspect-ratio: 3 / 4; background: ' + c;
+    return {
+      rootStyle: 'width: 390px; height: 1400px; box-sizing: border-box; background: ' + p.bg + '; color: ' + p.ink + '; font-family: \'Jost\', sans-serif; position: relative; overflow: hidden',
+      rule: 'width: 1px; height: 60px; background: ' + p.ink,
+      shortRule: 'width: 24px; height: 1px; background: ' + p.ink + '; align-self: center',
+      ghostBtn: btn + 'border: 1px solid ' + p.ink + '; color: ' + p.ink + ';',
+      solidBtn: btn + 'background: ' + p.ink + '; color: ' + p.bg + ';',
+      card: 'display: flex; flex-direction: column; gap: 8px; text-decoration: none; color: ' + p.ink,
+      img1: img(p.t[0]), img2: img(p.t[1]), img3: img(p.t[2]),
+      link: 'font-size: 10px; letter-spacing: 0.4em; padding: 10px 0; color: ' + p.ink,
+      barStyle: 'position: absolute; left: 0; right: 0; bottom: 0; padding: 12px 20px 20px; background: ' + p.bg + '; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; border-top: 1px solid ' + p.ink
+    };
+  }
+}
+</script>
+</body>
+</html>

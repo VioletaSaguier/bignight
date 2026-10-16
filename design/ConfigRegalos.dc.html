@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Armar la lista de regalos</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&amp;family=Instrument+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#3B348F}a:hover{color:#231E66}
+</style>
+</helmet>
+<div style="width: 1440px; height: 1160px; box-sizing: border-box; background: #F4F1EC; color: #1B1A1F; font-family: 'Instrument Sans', sans-serif; display: flex; flex-direction: column">
+
+<header style="height: 72px; padding: 0 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #DDD7CC; background: #FFFFFF">
+<div style="display: flex; align-items: center; gap: 40px">
+<span style="font-family: 'Fraunces', serif; font-size: 24px; font-style: italic">Noche Mágica</span>
+<nav style="display: flex; gap: 8px; font-size: 15px">
+<a href="#" style="padding: 12px 14px; text-decoration: none; color: #5A5560">Evento</a>
+<a href="Personalizar.dc.html" style="padding: 12px 14px; text-decoration: none; color: #5A5560">Diseño</a>
+<a href="#" style="padding: 12px 14px; text-decoration: none; color: #1B1A1F; font-weight: 600; border-bottom: 2px solid #3B348F">Regalos</a>
+<a href="#" style="padding: 12px 14px; text-decoration: none; color: #5A5560">Invitados</a>
+</nav>
+</div>
+<span style="font-size: 14px; color: #5A5560">Lu &amp; Fran · 17.04.2027</span>
+</header>
+
+<div style="flex-grow: 1; display: grid; grid-template-columns: 500px minmax(0, 1fr); gap: 40px; padding: 32px 40px">
+
+<section style="display: flex; flex-direction: column; gap: 20px">
+<div style="background: #FFFFFF; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #5A5560">1 · Rango de precios</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px">Desde<input type="text" value="AR$ 75.000" style="font: inherit; font-size: 16px; padding: 12px; border: 1px solid #DDD7CC; border-radius: 10px; color: #1B1A1F"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px">Hasta<input type="text" value="AR$ 1.850.000" style="font: inherit; font-size: 16px; padding: 12px; border: 1px solid #DDD7CC; border-radius: 10px; color: #1B1A1F"></label>
+</div>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px">Cantidad de regalos<select style="font: inherit; font-size: 16px; padding: 12px; border: 1px solid #DDD7CC; border-radius: 10px; background: #FFFFFF; color: #1B1A1F"><option>24, repartidos en todos los rangos</option></select></label>
+</div>
+
+<div style="background: #FFFFFF; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #5A5560">2 · ¿Qué lista querés?</div>
+<button type="button" onClick="{{pickDefault}}" style="{{defaultCard}}"><span style="font-weight: 600; font-size: 16px">Lista predeterminada</span><span style="font-size: 14px; color: #5A5560">Casa y luna de miel clásicas, lista para usar.</span></button>
+<button type="button" onClick="{{pickCustom}}" style="{{customCard}}"><span style="font-weight: 600; font-size: 16px">Personalizada por sus intereses</span><span style="font-size: 14px; color: #5A5560">Mismos precios, otros regalos: los arma a partir de lo que nos cuenten.</span></button>
+<sc-if value="{{isCustom}}" hint-placeholder-val="{{true}}">
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px">Contanos de ustedes<textarea rows="5" style="font: inherit; font-size: 15px; line-height: 1.5; padding: 12px; border: 1px solid #DDD7CC; border-radius: 10px; resize: none; color: #1B1A1F">Nos vamos a Costa Rica de luna de miel. Amamos el café, la playa y comer rico. Queremos probar surf. Para la casa nos falta todo lo de cocina y una buena cafetera.</textarea></label>
+<button type="button" style="align-self: flex-start; font: inherit; font-weight: 600; font-size: 15px; padding: 12px 18px; border: none; border-radius: 10px; background: #3B348F; color: #FFFFFF">Generar lista</button>
+</sc-if>
+</div>
+
+<div style="background: #FFFFFF; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 12px">
+<div style="font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #5A5560">3 · Dónde reciben la plata</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 15px"><span>Mercado Pago · cuenta de Lu</span><span style="color: #2F6B3C; font-weight: 600">Vinculada</span></div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 15px"><span>Alias para transferencias</span><span>lu.fran.costarica</span></div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 15px"><span>Cuenta en dólares</span><a href="#" style="padding: 8px 0">Agregar</a></div>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 16px; min-width: 0">
+<div style="display: flex; justify-content: space-between; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<h2 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 400; font-size: 34px">{{title}}</h2>
+<p style="margin: 0; font-size: 15px; color: #5A5560">{{subtitle}}</p>
+</div>
+<a href="Regalos.dc.html" style="font-weight: 600; font-size: 15px; padding: 10px 0">Ver como invitado →</a>
+</div>
+<div style="background: #FFFFFF; border-radius: 16px; overflow: hidden">
+<div style="display: grid; grid-template-columns: 160px minmax(0, 1fr) 140px; padding: 12px 20px; background: #1B1A1F; color: #F4F1EC; font-size: 13px; font-weight: 600"><span>Precio</span><span>Regalo</span><span></span></div>
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="10">
+<div style="display: grid; grid-template-columns: 160px minmax(0, 1fr) 140px; gap: 12px; align-items: center; padding: 14px 20px; border-bottom: 1px solid #EEE9E0">
+<span style="font-size: 15px">AR$ {{r.price}}</span>
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 16px; font-weight: 500">{{r.name}}</span><span style="font-size: 13px; color: #6E6873">{{r.note}}</span></span>
+<span style="display: flex; gap: 6px; justify-content: flex-end"><button type="button" style="font: inherit; font-size: 13px; padding: 8px 10px; border: 1px solid #DDD7CC; border-radius: 8px; background: #FFFFFF; color: #1B1A1F">Editar</button><button type="button" aria-label="Quitar" style="font: inherit; font-size: 13px; padding: 8px 10px; border: 1px solid #DDD7CC; border-radius: 8px; background: #FFFFFF; color: #1B1A1F">Quitar</button></span>
+</div>
+</sc-for>
+<div style="padding: 14px 20px; font-size: 14px; color: #5A5560">Mostrando 10 de 24 · <a href="#">+ Agregar un regalo propio</a></div>
+</div>
+</section>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1160}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { mode: 'custom' };
+  }
+  renderVals() {
+    const tiers = [
+      { p: 75000, g: 'Voucher almuerzo', c: 'Desayuno con vista al mar en Tamarindo', w: 'Porque aman desayunar tarde' },
+      { p: 120000, g: 'Freidora de aire', c: 'Tour de café con cata', w: 'Café' },
+      { p: 172000, g: 'Sesión de masajes', c: 'Masaje para dos en Manuel Antonio', w: 'Luna de miel en Costa Rica' },
+      { p: 208500, g: 'Clase de surf', c: 'Clase de surf para dos en Nosara', w: 'Quieren probar surf' },
+      { p: 300500, g: 'Día de spa', c: 'Kayak al atardecer en Papagayo', w: 'Playa' },
+      { p: 357000, g: 'Buceo', c: 'Snorkel en Isla Tortuga', w: 'Playa' },
+      { p: 550000, g: 'Cena romántica frente al mar', c: 'Cena de pescado en Santa Teresa', w: 'Comer rico' },
+      { p: 630000, g: 'Cafetera', c: 'Cafetera espresso para la casa', w: 'Quieren una buena cafetera' },
+      { p: 1000000, g: 'Kitchen + mini procesador', c: 'Batería de cocina completa', w: 'Les falta lo de cocina' },
+      { p: 1850000, g: 'Dos pasajes aéreos', c: 'Dos pasajes a San José (compartido)', w: 'Luna de miel en Costa Rica' }
+    ];
+    const custom = this.state.mode === 'custom';
+    const fmt = (n) => n.toLocaleString('es-AR');
+    const card = (on) => 'font: inherit; text-align: left; display: flex; flex-direction: column; gap: 4px; padding: 16px; border-radius: 12px; background: ' + (on ? '#F1EFFA' : '#FFFFFF') + '; border: ' + (on ? '2px solid #3B348F' : '1px solid #DDD7CC') + '; color: #1B1A1F';
+    return {
+      isCustom: custom,
+      pickDefault: () => this.setState({ mode: 'default' }),
+      pickCustom: () => this.setState({ mode: 'custom' }),
+      defaultCard: card(!custom),
+      customCard: card(custom),
+      title: custom ? 'Su lista, armada con sus intereses' : 'Lista predeterminada',
+      subtitle: custom ? 'Mismos rangos de precio que la lista clásica, con regalos que hablan de ustedes.' : 'Regalos clásicos de casa y luna de miel en todos los rangos.',
+      rows: tiers.map((t) => ({
+        price: fmt(t.p),
+        name: custom ? t.c : t.g,
+        note: custom ? ('Por: ' + t.w.toLowerCase() + ' · en lugar de ' + t.g.toLowerCase()) : 'Genérico'
+      }))
+    };
+  }
+}
+</script>
+</body>
+</html>

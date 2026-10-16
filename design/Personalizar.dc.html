@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Personalizar tu página</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&amp;family=Instrument+Sans:wght@400;500;600&amp;family=Cormorant+Garamond:ital@1&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#3B348F}a:hover{color:#231E66}
+</style>
+</helmet>
+<div style="width: 1440px; height: 1560px; box-sizing: border-box; background: #F4F1EC; color: #1B1A1F; font-family: 'Instrument Sans', sans-serif; display: flex; flex-direction: column">
+
+<header style="height: 72px; padding: 0 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #DDD7CC; background: #FFFFFF">
+<div style="display: flex; align-items: center; gap: 40px">
+<span style="font-family: 'Fraunces', serif; font-size: 24px; font-style: italic">Noche Mágica</span>
+<nav style="display: flex; gap: 8px; font-size: 15px">
+<a href="#" style="padding: 12px 14px; text-decoration: none; color: #5A5560">Evento</a>
+<a href="#" style="padding: 12px 14px; text-decoration: none; color: #1B1A1F; font-weight: 600; border-bottom: 2px solid #3B348F">Diseño</a>
+<a href="#" style="padding: 12px 14px; text-decoration: none; color: #5A5560">Regalos</a>
+<a href="#" style="padding: 12px 14px; text-decoration: none; color: #5A5560">Invitados</a>
+</nav>
+</div>
+<div style="display: flex; gap: 12px; align-items: center">
+<span style="font-size: 14px; color: #5A5560">Lu &amp; Fran · 17.04.2027</span>
+<button type="button" style="font: inherit; font-weight: 600; font-size: 15px; padding: 12px 20px; border: none; border-radius: 10px; background: #1B1A1F; color: #F4F1EC">Publicar y compartir</button>
+</div>
+</header>
+
+<div style="flex-grow: 1; display: grid; grid-template-columns: 420px minmax(0, 1fr) 440px; gap: 32px; padding: 32px 40px">
+
+<section style="display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #5A5560">Paso 1</div>
+<h2 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 400; font-size: 32px; line-height: 1.1">Subí tu invitación</h2>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #3D3942">Foto, PDF o el diseño digital. Tomamos sus colores, tipografía y adornos para que la página combine.</p>
+</div>
+<div style="background: #FFFFFF; border: 1px dashed #B9B2A6; border-radius: 16px; padding: 24px; display: flex; gap: 20px; align-items: center">
+<div style="width: 120px; height: 168px; flex-shrink: 0; background: #F7EFEA; border: 1px solid #D9BDB5; box-shadow: 0 6px 16px rgba(27,26,31,0.12); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; font-family: 'Cormorant Garamond', serif; font-style: italic; color: #7A2E3A; transform: rotate(-3deg)"><span style="font-size: 26px">Lu &amp; Fran</span><span style="font-size: 12px; color: #3A2A2C">17 · 04 · 2027</span></div>
+<div style="display: flex; flex-direction: column; gap: 8px; font-size: 14px">
+<strong style="font-size: 15px">invitacion-lu-fran.pdf</strong>
+<span style="color: #5A5560">Analizada</span>
+<button type="button" style="align-self: flex-start; font: inherit; font-size: 14px; padding: 10px 14px; border: 1px solid #DDD7CC; border-radius: 10px; background: #FFFFFF; color: #1B1A1F">Cambiar archivo</button>
+</div>
+</div>
+<div style="background: #FFFFFF; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 18px">
+<div style="font-weight: 600; font-size: 15px">Lo que encontramos</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; color: #5A5560">Paleta</span>
+<div style="display: flex; gap: 8px">
+<div style="width: 52px; height: 52px; border-radius: 10px; background: #F7EFEA; border: 1px solid #DDD7CC"></div>
+<div style="width: 52px; height: 52px; border-radius: 10px; background: #E8D5CF"></div>
+<div style="width: 52px; height: 52px; border-radius: 10px; background: #C9A39A"></div>
+<div style="width: 52px; height: 52px; border-radius: 10px; background: #7A2E3A"></div>
+<div style="width: 52px; height: 52px; border-radius: 10px; background: #3A2A2C"></div>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; font-size: 14px">
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 13px; color: #5A5560">Tipografía</span><span>Serif itálica clásica</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 13px; color: #5A5560">Adornos</span><span>Arco, líneas finas</span></div>
+</div>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 28px; min-width: 0">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #5A5560">Paso 2</div>
+<h2 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 400; font-size: 32px">Elegí el mundo de tu página</h2>
+</div>
+<div style="display: flex; gap: 6px; flex-wrap: wrap">
+<button type="button" style="font: inherit; font-size: 13px; padding: 8px 12px; border-radius: 999px; border: 1px solid #DDD7CC; background: #FFFFFF; color: #1B1A1F">Con foto · 8</button>
+<button type="button" style="font: inherit; font-size: 13px; padding: 8px 12px; border-radius: 999px; border: 1px solid #1B1A1F; background: #1B1A1F; color: #FFFFFF">Minimalista sin foto · 9</button>
+<button type="button" style="font: inherit; font-size: 13px; padding: 8px 12px; border-radius: 999px; border: 1px solid #DDD7CC; background: #FFFFFF; color: #1B1A1F">Artístico · 11</button>
+<button type="button" style="font: inherit; font-size: 13px; padding: 8px 12px; border-radius: 999px; border: 1px solid #DDD7CC; background: #FFFFFF; color: #1B1A1F">Muñeco de torta · 5</button>
+</div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px">
+<button type="button" style="font: inherit; text-align: left; padding: 0; border: 2px solid #3B348F; border-radius: 12px; background: #FFFFFF; overflow: hidden; color: #1B1A1F"><div style="height: 100px; background: #F7F4EC; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-family: 'Cormorant Garamond', serif; color: #2A2A26"><svg width="70" height="26" viewBox="0 0 70 26" fill="none" stroke="#2A2A26" stroke-width="1" aria-hidden="true"><path d="M2 22 C14 14 24 12 34 16 C44 20 52 10 68 12"/><path d="M18 16 V6 M22 15 V8 M50 12 V4"/></svg><span style="font-size: 13px; letter-spacing: 0.1em">ANA &amp; NICO</span></div><div style="padding: 8px 10px; font-size: 13px"><strong>Paisaje a línea</strong></div></button>
+<button type="button" style="font: inherit; text-align: left; padding: 0; border: 1px solid #DDD7CC; border-radius: 12px; background: #FFFFFF; overflow: hidden; color: #1B1A1F"><div style="height: 100px; background: #E3DBCF; display: flex; align-items: center; justify-content: center; font-size: 9px; letter-spacing: 0.3em; color: #3F3A33; text-align: center; line-height: 2">FLORENCIA<br>&amp;<br>JOAQUÍN</div><div style="padding: 8px 10px; font-size: 13px"><strong>Susurro</strong></div></button>
+<button type="button" style="font: inherit; text-align: left; padding: 0; border: 1px solid #DDD7CC; border-radius: 12px; background: #FFFFFF; overflow: hidden; color: #1B1A1F"><div style="height: 100px; background: #EDE8E0; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 30px; color: #B4231F">Nos casamos</div><div style="padding: 8px 10px; font-size: 13px"><strong>Firma roja</strong></div></button>
+<button type="button" style="font: inherit; text-align: left; padding: 0; border: 1px solid #DDD7CC; border-radius: 12px; background: #FFFFFF; overflow: hidden; color: #1B1A1F"><div style="height: 100px; background: #F5EFEB; display: flex; align-items: center; justify-content: center"><svg width="80" height="40" viewBox="0 0 80 40" fill="none" stroke="#5E1F2E" stroke-width="1" aria-hidden="true"><path d="M30 26 H50 V16 L40 10 L30 16 Z M0 40 L34 26 M20 40 L38 27 M40 40 L40 27 M60 40 L42 27 M80 40 L46 26"/></svg></div><div style="padding: 8px 10px; font-size: 13px"><strong>Línea · Viñedo</strong></div></button>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 14px"><span style="color: #5A5560">Tocá un estilo para verlo con tus datos</span><span style="display: flex; gap: 6px"><button type="button" aria-label="Estilos anteriores" style="font: inherit; width: 40px; height: 40px; border-radius: 50%; border: 1px solid #DDD7CC; background: #FFFFFF; color: #1B1A1F">←</button><button type="button" aria-label="Más estilos" style="font: inherit; width: 40px; height: 40px; border-radius: 50%; border: 1px solid #DDD7CC; background: #FFFFFF; color: #1B1A1F">→</button></span></div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 14px">Paleta de Paisaje a línea</span>
+<div style="display: flex; gap: 8px">
+<button type="button" aria-label="Paleta Tinta" style="width: 44px; height: 44px; border-radius: 50%; border: 3px solid #3B348F; background: linear-gradient(135deg, #F7F4EC 50%, #2A2A26 50%)"></button>
+<button type="button" aria-label="Paleta Oliva" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid #DDD7CC; background: linear-gradient(135deg, #F2F0E4 50%, #4A5A33 50%)"></button>
+<button type="button" aria-label="Paleta Terracota" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid #DDD7CC; background: linear-gradient(135deg, #F8EEE4 50%, #9C4528 50%)"></button>
+<button type="button" aria-label="Paleta Azul toscano" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid #DDD7CC; background: linear-gradient(135deg, #F1F3F2 50%, #2B4A8C 50%)"></button>
+<button type="button" aria-label="Paleta Ciruela" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid #DDD7CC; background: linear-gradient(135deg, #F5EEF0 50%, #6B2E4A 50%)"></button>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 14px">¿Cómo se llama la sección de regalos?</span>
+<div style="display: flex; gap: 6px; flex-wrap: wrap">
+<button type="button" style="font: inherit; font-size: 14px; padding: 10px 14px; border-radius: 999px; border: 2px solid #3B348F; background: #F1EFFA; color: #1B1A1F">Regalos</button>
+<button type="button" style="font: inherit; font-size: 14px; padding: 10px 14px; border-radius: 999px; border: 1px solid #DDD7CC; background: #FFFFFF; color: #1B1A1F">Regalanos</button>
+<button type="button" style="font: inherit; font-size: 14px; padding: 10px 14px; border-radius: 999px; border: 1px solid #DDD7CC; background: #FFFFFF; color: #1B1A1F">Gift shop</button>
+<button type="button" style="font: inherit; font-size: 14px; padding: 10px 14px; border-radius: 999px; border: 1px solid #DDD7CC; background: #FFFFFF; color: #1B1A1F">Mesa de regalos</button>
+<button type="button" style="font: inherit; font-size: 14px; padding: 10px 14px; border-radius: 999px; border: 1px solid #DDD7CC; background: #FFFFFF; color: #1B1A1F">Lista de regalos</button>
+<button type="button" style="font: inherit; font-size: 14px; padding: 10px 14px; border-radius: 999px; border: 1px dashed #B9B2A6; background: #FFFFFF; color: #1B1A1F">Escribir otro</button>
+</div>
+<span style="font-size: 13px; color: #5A5560">Cada estilo trae uno sugerido; lo podés cambiar.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 14px">Tono de voz</span>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px">
+<button type="button" style="font: inherit; text-align: left; padding: 12px; border: 1px solid #DDD7CC; border-radius: 12px; background: #FFFFFF; color: #1B1A1F; font-size: 14px"><strong>Formal</strong><br><span style="color: #5A5560">“¿Asistís?”</span></button>
+<button type="button" style="font: inherit; text-align: left; padding: 12px; border: 2px solid #3B348F; border-radius: 12px; background: #F1EFFA; color: #1B1A1F; font-size: 14px"><strong>Cálido</strong><br><span style="color: #5A5560">“¿Nos acompañás?”</span></button>
+<button type="button" style="font: inherit; text-align: left; padding: 12px; border: 1px solid #DDD7CC; border-radius: 12px; background: #FFFFFF; color: #1B1A1F; font-size: 14px"><strong>Descontracturado</strong><br><span style="color: #5A5560">“¿Venís?”</span></button>
+<button type="button" style="font: inherit; text-align: left; padding: 12px; border: 1px solid #DDD7CC; border-radius: 12px; background: #FFFFFF; color: #1B1A1F; font-size: 14px"><strong>Divertido</strong><br><span style="color: #5A5560">“¿Caés?”</span></button>
+</div>
+</div>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px">Ajustalo con palabras (opcional)<input type="text" placeholder="Ej.: más campestre, con flores secas" style="font: inherit; font-size: 15px; padding: 14px; border: 1px solid #DDD7CC; border-radius: 10px; background: #FFFFFF; color: #1B1A1F"></label>
+</div>
+
+<div style="background: #FFFFFF; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #5A5560">Paso 3</div>
+<h2 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 400; font-size: 28px">Contanos de ustedes para armar los regalos</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px">¿Se van de viaje?<input type="text" value="Costa Rica" style="font: inherit; font-size: 15px; padding: 12px; border: 1px solid #DDD7CC; border-radius: 10px; color: #1B1A1F"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px">Rango de precios<select style="font: inherit; font-size: 15px; padding: 12px; border: 1px solid #DDD7CC; border-radius: 10px; background: #FFFFFF; color: #1B1A1F"><option>US$ 40 a US$ 2.000</option></select></label>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 14px">¿Qué les gusta?</span>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<button type="button" style="font: inherit; font-size: 14px; padding: 10px 14px; border-radius: 999px; border: 1px solid #3B348F; background: #3B348F; color: #FFFFFF">Playa</button>
+<button type="button" style="font: inherit; font-size: 14px; padding: 10px 14px; border-radius: 999px; border: 1px solid #3B348F; background: #3B348F; color: #FFFFFF">Café</button>
+<button type="button" style="font: inherit; font-size: 14px; padding: 10px 14px; border-radius: 999px; border: 1px solid #3B348F; background: #3B348F; color: #FFFFFF">Aventura</button>
+<button type="button" style="font: inherit; font-size: 14px; padding: 10px 14px; border-radius: 999px; border: 1px solid #3B348F; background: #3B348F; color: #FFFFFF">Gastronomía</button>
+<button type="button" style="font: inherit; font-size: 14px; padding: 10px 14px; border-radius: 999px; border: 1px solid #DDD7CC; background: #FFFFFF; color: #1B1A1F">Vino</button>
+<button type="button" style="font: inherit; font-size: 14px; padding: 10px 14px; border-radius: 999px; border: 1px solid #DDD7CC; background: #FFFFFF; color: #1B1A1F">Spa</button>
+<button type="button" style="font: inherit; font-size: 14px; padding: 10px 14px; border-radius: 999px; border: 1px solid #DDD7CC; background: #FFFFFF; color: #1B1A1F">Música en vivo</button>
+<button type="button" style="font: inherit; font-size: 14px; padding: 10px 14px; border-radius: 999px; border: 1px solid #DDD7CC; background: #FFFFFF; color: #1B1A1F">Casa nueva</button>
+<button type="button" style="font: inherit; font-size: 14px; padding: 10px 14px; border-radius: 999px; border: 1px solid #DDD7CC; background: #FFFFFF; color: #1B1A1F">+ Otro</button>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; background: #F4F1EC; border-radius: 12px; padding: 16px">
+<span style="font-size: 15px"><strong>24 regalos</strong> sugeridos para Costa Rica. Podés editar, sacar o sumar.</span>
+<a href="ConfigRegalos.dc.html" style="font-weight: 600; font-size: 15px; padding: 12px 0; text-decoration: none">Revisar lista →</a>
+</div>
+</div>
+</section>
+
+<aside style="display: flex; flex-direction: column; align-items: center; gap: 14px">
+<div style="display: flex; gap: 8px; font-size: 14px">
+<button type="button" style="font: inherit; padding: 10px 16px; border-radius: 999px; border: none; background: #1B1A1F; color: #F4F1EC">Celular</button>
+<button type="button" style="font: inherit; padding: 10px 16px; border-radius: 999px; border: 1px solid #DDD7CC; background: #FFFFFF; color: #1B1A1F">Computadora</button>
+</div>
+<div style="width: 340px; height: 820px; border-radius: 40px; background: #1B1A1F; padding: 12px; box-sizing: border-box">
+<div style="width: 100%; height: 100%; border-radius: 30px; background: #F7EFEA; overflow: hidden; display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 36px 20px; box-sizing: border-box; text-align: center; color: #3A2A2C">
+<div style="font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #7A2E3A">Nos casamos</div>
+<div style="width: 200px; height: 250px; border-radius: 100px 100px 0 0; background: #E8D5CF; border: 1px solid #D9BDB5"></div>
+<div style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 50px; line-height: 1">Lu &amp; Fran</div>
+<div style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px">17 · abril · 2027</div>
+<div style="width: 80px; height: 1px; background: #C9A39A; margin: 8px 0"></div>
+<div style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 26px">Cuándo y dónde</div>
+<div style="font-size: 13px; line-height: 1.5">Estancia [NOMBRE]<br>San Antonio de Areco</div>
+<div style="margin-top: auto; width: 100%; padding: 14px; background: #7A2E3A; color: #FFF8F5; border-radius: 999px; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; box-sizing: border-box">Confirmar asistencia</div>
+</div>
+</div>
+<span style="font-size: 13px; color: #5A5560">Vista previa en vivo</span>
+</aside>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1560}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

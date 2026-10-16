@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Huerto mediterráneo</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&amp;family=Karla:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#245C8F}a:hover{color:#173F63}
+.scallop{background:radial-gradient(circle at 12px 0, #FBF3E3 11px, transparent 12px) 0 0/24px 14px repeat-x}
+.tiles{background-color:#2F6EA5;background-image:linear-gradient(45deg,#FBF3E3 12%,transparent 12%,transparent 88%,#FBF3E3 88%),linear-gradient(-45deg,#FBF3E3 12%,transparent 12%,transparent 88%,#FBF3E3 88%);background-size:28px 28px}
+</style>
+</helmet>
+<div style="width: 390px; min-height: 1200px; box-sizing: border-box; background: #FBF3E3; color: #22303C; font-family: 'Karla', sans-serif; display: flex; flex-direction: column">
+<div class="tiles" style="height: 70px"></div>
+<div class="scallop" style="height: 14px; background-color: #2F6EA5"></div>
+<div style="padding: 36px 24px 0; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center">
+<svg width="120" height="64" viewBox="0 0 120 64" aria-hidden="true"><ellipse cx="38" cy="38" rx="26" ry="20" fill="#F2C230" stroke="#22303C" stroke-width="2"/><ellipse cx="82" cy="38" rx="22" ry="20" fill="{{accent}}" stroke="#22303C" stroke-width="2"/><path d="M60 18 C64 6 78 4 86 8 C78 16 68 18 60 18 Z" fill="#5E8C3A" stroke="#22303C" stroke-width="2"/></svg>
+<div style="font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: #245C8F">Nos casamos en la costa</div>
+<h1 style="margin: 0; font-family: 'Gloock', serif; font-weight: 400; font-size: 58px; line-height: 1">Ana<br>&amp; Leo</h1>
+<div style="font-style: italic; font-size: 19px">Viernes 14 de enero · José Ignacio</div>
+</div>
+<div style="margin: 28px 24px 0; height: 230px; border-radius: 16px; border: 2px solid #22303C; background: #F4DDB6; display: flex; align-items: center; justify-content: center; font-size: 13px">Foto al sol</div>
+<div style="padding: 32px 24px 40px; display: flex; flex-direction: column; gap: 24px">
+<section style="background: #FFFFFF; border: 2px solid #22303C; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 8px">
+<h2 style="margin: 0; font-family: 'Gloock', serif; font-weight: 400; font-size: 28px">El plan</h2>
+<div style="display: flex; justify-content: space-between; font-size: 16px; padding: 8px 0; border-bottom: 1px dashed #B7A584"><span>Ceremonia en la playa</span><span>18:00</span></div>
+<div style="display: flex; justify-content: space-between; font-size: 16px; padding: 8px 0; border-bottom: 1px dashed #B7A584"><span>Aperitivo y limonada</span><span>19:00</span></div>
+<div style="display: flex; justify-content: space-between; font-size: 16px; padding: 8px 0"><span>Cena bajo las parras</span><span>21:00</span></div>
+</section>
+<section style="display: flex; flex-direction: column; gap: 10px; text-align: center">
+<h2 style="margin: 0; font-family: 'Gloock', serif; font-weight: 400; font-size: 32px">¿Te sumás?</h2>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<button type="button" style="font: inherit; font-weight: 600; font-size: 16px; padding: 15px; border: 2px solid #22303C; border-radius: 12px; background: {{accent}}; color: #FFFFFF">Sí, allá voy</button>
+<button type="button" style="font: inherit; font-weight: 600; font-size: 16px; padding: 15px; border: 2px solid #22303C; border-radius: 12px; background: #FFFFFF; color: #22303C">Esta vez no</button>
+</div>
+</section>
+<a href="Regalos.dc.html" style="text-align: center; font-weight: 600; font-size: 16px; padding: 16px; border: 2px solid #22303C; border-radius: 12px; background: #F2C230; color: #22303C; text-decoration: none">Regalos para la luna de miel</a>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#C8551E","options":["#C8551E","#245C8F","#5E8C3A"]},"$preview":{"width":390,"height":1200}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#C8551E' };
+  }
+}
+</script>
+</body>
+</html>

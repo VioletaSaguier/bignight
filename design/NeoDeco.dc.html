@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Neo Deco</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Poiret+One&amp;family=Josefin+Sans:wght@300;400;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#E9E2D3}a:hover{color:#FFFFFF}
+</style>
+</helmet>
+<div style="width: 390px; min-height: 1200px; box-sizing: border-box; background: #0F1A17; color: #E9E2D3; font-family: 'Josefin Sans', sans-serif; font-weight: 300; padding: 20px; display: flex; flex-direction: column">
+<div style="border: 1px solid #A9AEB2; padding: 8px; flex-grow: 1; display: flex">
+<div style="border: 2px solid #A9AEB2; flex-grow: 1; padding: 32px 20px; display: flex; flex-direction: column; align-items: center; gap: 26px; text-align: center">
+<svg width="160" height="80" viewBox="0 0 160 80" aria-hidden="true"><path d="M80 78 L8 78 A72 72 0 0 1 152 78 Z" fill="none" stroke="#A9AEB2" stroke-width="1.5"/><path d="M80 78 L30 30 M80 78 L55 12 M80 78 L80 6 M80 78 L105 12 M80 78 L130 30" stroke="#A9AEB2" stroke-width="1.5"/><path d="M80 78 L44 78 A36 36 0 0 1 116 78 Z" fill="{{accent}}"/></svg>
+<div style="font-size: 12px; letter-spacing: 0.4em; text-transform: uppercase; color: #A9AEB2">Una noche de gala</div>
+<h1 style="margin: 0; font-family: 'Poiret One', sans-serif; font-weight: 400; font-size: 60px; line-height: 1; letter-spacing: 0.04em">ELE<br><span style="font-size: 28px; color: #A9AEB2">&amp;</span><br>MATÍAS</h1>
+<div style="display: flex; align-items: center; gap: 12px; font-size: 15px; letter-spacing: 0.3em"><span style="width: 32px; height: 1px; background: #A9AEB2"></span>20 · XI · 2027<span style="width: 32px; height: 1px; background: #A9AEB2"></span></div>
+<div style="width: 100%; height: 200px; background: {{accent}}; clip-path: polygon(0 18%, 18% 18%, 18% 0, 82% 0, 82% 18%, 100% 18%, 100% 100%, 0 100%); display: flex; align-items: center; justify-content: center; font-size: 13px; color: #F1D9D2">Retrato</div>
+<section style="width: 100%; display: flex; flex-direction: column; gap: 0">
+<div style="display: flex; justify-content: space-between; padding: 12px 0; border-top: 1px solid #3A4743; font-size: 15px"><span>Ceremonia</span><span>20:30</span></div>
+<div style="display: flex; justify-content: space-between; padding: 12px 0; border-top: 1px solid #3A4743; font-size: 15px"><span>Cóctel en el bar</span><span>21:30</span></div>
+<div style="display: flex; justify-content: space-between; padding: 12px 0; border-top: 1px solid #3A4743; border-bottom: 1px solid #3A4743; font-size: 15px"><span>Etiqueta</span><span>Black tie</span></div>
+</section>
+<div style="font-size: 15px; line-height: 1.5">Palacio [NOMBRE], Recoleta</div>
+<div style="width: 100%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<button type="button" style="font: inherit; font-weight: 600; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; padding: 16px 6px; border: 1px solid #E9E2D3; background: #E9E2D3; color: #0F1A17">Asistiré</button>
+<button type="button" style="font: inherit; font-weight: 600; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; padding: 16px 6px; border: 1px solid #A9AEB2; background: transparent; color: #E9E2D3">No asistiré</button>
+</div>
+<a href="Regalos.dc.html" style="font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; padding: 12px 0">Mesa de regalos</a>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#7A1F26","options":["#7A1F26","#B08D57","#2B4C7E"]},"$preview":{"width":390,"height":1200}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#7A1F26' };
+  }
+}
+</script>
+</body>
+</html>

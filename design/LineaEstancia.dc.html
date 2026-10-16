@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Línea · Estancia</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="{{root}}">
+<div style="padding: 44px 28px 120px; display: flex; flex-direction: column; gap: 24px">
+<svg width="334" height="150" viewBox="0 0 334 150" fill="none" stroke="{{ink}}" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M70 140 C68 110 74 96 66 80 M70 140 C74 112 82 100 90 86"/><path d="M66 80 C30 84 14 60 30 44 C20 24 46 8 66 18 C80 2 112 6 116 28 C138 32 136 60 116 66 C110 84 90 92 66 80 Z"/><path d="M180 140 V104 M180 104 H290 M180 116 H290 M180 128 H290 M216 104 V140 M252 104 V140 M290 100 V140 M180 104 L216 128 M216 104 L252 128 M252 104 L290 128"/><path d="M128 140 C130 128 136 122 146 122 C150 112 160 112 162 120 C166 118 168 124 164 128 L166 140 M136 140 V132 M156 140 V132"/><path d="M0 142 H334"/><path d="M250 30 C256 26 262 26 266 30"/></svg>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 13px; letter-spacing: 0.24em; font-variant: small-caps">casamiento en el campo</div>
+<h1 style="margin: 0; font-weight: 400; font-size: 48px; line-height: 1">Agustina <span style="font-style: italic">&amp;</span> Pedro</h1>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; font-size: 16px; line-height: 1.45; border-top: 1px solid {{ink}}; border-bottom: 1px solid {{ink}}; padding: 14px 0"><div><span style="font-style: italic">cuándo</span><br>sábado 4 de marzo<br>17:30 h</div><div><span style="font-style: italic">dónde</span><br>Estancia [NOMBRE]<br>San Antonio de Areco</div></div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<a href="#" style="{{ghost}}">Confirmar</a>
+<a href="Regalos.dc.html" style="{{solid}}">Regalos</a>
+</div>
+<section style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 28px">Regalos</div>
+<a href="Regalos.dc.html" style="{{row}}"><span>Asado para los amigos</span><span>$ 90.000</span></a>
+<a href="Regalos.dc.html" style="{{row}}"><span>Escapada a Mendoza</span><span>$ 260.000</span></a>
+<a href="Regalos.dc.html" style="{{row}}"><span>Parrilla para la casa · compartido</span><span>70%</span></a>
+<div style="display: flex; justify-content: space-between; align-items: center; padding-top: 4px; font-size: 14px"><span style="font-style: italic">en pesos · también en dólares</span><a href="Regalos.dc.html" style="{{link}}">ver todos</a></div>
+</section>
+<div style="font-size: 16px; line-height: 1.7"><span style="font-style: italic">traslado</span> combi desde Plaza San Martín, 15 h<br><span style="font-style: italic">vestimenta</span> elegante sport, calzado cómodo para pasto</div>
+</div>
+<div style="{{bar}}">
+<a href="#" style="{{ghost}}">Confirmar</a>
+<a href="Regalos.dc.html" style="{{solid}}">Regalos</a>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"palette":{"editor":"enum","default":"Pampa","options":["Pampa","Cuero","Tinta","Azul toscano","Ciruela"]},"$preview":{"width":390,"height":1400}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const P = { 'Pampa': ['#F3F0E3', '#3E4C2E'], 'Cuero': ['#F5ECE0', '#7A4A28'], 'Tinta': ['#F7F4EC', '#2A2A26'], 'Azul toscano': ['#F1F3F2', '#2B4A8C'], 'Ciruela': ['#F5EEF0', '#6B2E4A'] };
+    const [bg, ink] = P[this.props.palette] || P['Pampa'];
+    const b = 'text-align: center; font-family: inherit; font-size: 17px; padding: 14px 6px; text-decoration: none; ';
+    return {
+      ink,
+      root: 'width: 390px; height: 1400px; box-sizing: border-box; background: ' + bg + '; color: ' + ink + '; font-family: \'EB Garamond\', serif; position: relative; overflow: hidden',
+      ghost: b + 'border: 1px solid ' + ink + '; color: ' + ink + ';',
+      solid: b + 'background: ' + ink + '; color: ' + bg + ';',
+      row: 'display: flex; justify-content: space-between; gap: 10px; padding: 11px 0; border-bottom: 1px dotted ' + ink + '; font-size: 17px; text-decoration: none; color: ' + ink,
+      link: 'font-style: italic; padding: 10px 0; color: ' + ink,
+      bar: 'position: absolute; left: 0; right: 0; bottom: 0; padding: 12px 16px 20px; background: ' + bg + '; border-top: 1px solid ' + ink + '; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px'
+    };
+  }
+}
+</script>
+</body>
+</html>

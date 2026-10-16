@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Marco ondulado</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&amp;family=DM+Sans:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#9E2433}a:hover{color:#731924}
+</style>
+</helmet>
+<div style="width: 390px; height: 1400px; box-sizing: border-box; background: {{ground}}; color: #9E2433; font-family: 'DM Sans', sans-serif; position: relative; overflow: hidden; padding: 22px 18px 0">
+
+<div style="position: relative; height: 470px">
+<svg viewBox="0 0 354 470" width="354" height="470" aria-hidden="true" style="position: absolute; inset: 0"><path d="M20 30 Q40 6 70 22 Q100 38 130 18 Q160 0 190 18 Q220 36 250 16 Q280 0 310 22 Q340 40 336 80 Q330 120 344 160 Q356 200 340 240 Q326 280 342 320 Q356 360 336 400 Q320 440 290 448 Q260 456 230 444 Q200 432 170 450 Q140 466 110 448 Q80 432 50 450 Q20 462 14 420 Q8 380 20 340 Q30 300 12 260 Q0 220 16 180 Q30 140 12 100 Q0 60 20 30 Z" fill="none" stroke="#9E2433" stroke-width="2"/></svg>
+<div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; text-align: center; padding: 40px">
+<div style="font-size: 11px; letter-spacing: 0.3em">JUNTO A SUS FAMILIAS</div>
+<div style="font-family: 'Pinyon Script', cursive; font-size: 78px; line-height: 0.9">Bella<br><span style="font-size: 40px">&amp;</span><br>Antoni</div>
+<div style="font-size: 14px; line-height: 1.6">los invitan a celebrar su casamiento<br>sábado 12 de febrero · 18 h<br>Estancia [NOMBRE], Lobos</div>
+</div>
+</div>
+
+<div style="padding: 24px 6px 120px; display: flex; flex-direction: column; gap: 24px">
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<a href="#" style="text-align: center; font-weight: 500; font-size: 15px; padding: 15px; border: 2px solid #9E2433; border-radius: 999px; text-decoration: none">Confirmar</a>
+<a href="Regalos.dc.html" style="text-align: center; font-weight: 500; font-size: 15px; padding: 15px; background: #9E2433; color: {{ground}}; border-radius: 999px; text-decoration: none">Regalar</a>
+</div>
+
+<section style="background: #FFF6F4; border-radius: 40px 40px 12px 12px; padding: 22px 18px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-family: 'Pinyon Script', cursive; font-size: 40px; line-height: 1; text-align: center">Regalos</div>
+<a href="Regalos.dc.html" style="display: flex; justify-content: space-between; padding: 12px 4px; border-bottom: 1px solid #F0C9C4; font-size: 15px; text-decoration: none"><span>Brunch en Lisboa</span><span>55.000</span></a>
+<a href="Regalos.dc.html" style="display: flex; justify-content: space-between; padding: 12px 4px; border-bottom: 1px solid #F0C9C4; font-size: 15px; text-decoration: none"><span>Juego de copas</span><span>120.000</span></a>
+<a href="Regalos.dc.html" style="display: flex; justify-content: space-between; padding: 12px 4px; font-size: 15px; text-decoration: none"><span>Noches en Oporto · compartido</span><span>62%</span></a>
+<a href="Regalos.dc.html" style="align-self: center; font-weight: 500; font-size: 14px; padding: 10px 0">Ver todos los regalos</a>
+<div style="text-align: center; font-size: 12px">Precios en pesos · también podés pagar en dólares</div>
+</section>
+
+<section style="text-align: center; font-size: 14px; line-height: 1.7">Ceremonia en la capilla · cena en el parque<br>Vestimenta: formal, colores pastel</section>
+</div>
+
+<div style="position: absolute; left: 0; right: 0; bottom: 0; padding: 12px 16px 20px; background: {{ground}}; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<a href="#" style="text-align: center; font-weight: 500; font-size: 15px; padding: 13px; border: 2px solid #9E2433; border-radius: 999px; text-decoration: none">Confirmar</a>
+<a href="Regalos.dc.html" style="text-align: center; font-weight: 500; font-size: 15px; padding: 13px; background: #9E2433; color: {{ground}}; border-radius: 999px; text-decoration: none">Regalar</a>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"ground":{"editor":"color","default":"#F6CFCB","options":["#F6CFCB","#F3E7C9","#D5E3F0"]},"$preview":{"width":390,"height":1400}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { ground: this.props.ground ?? '#F6CFCB' };
+  }
+}
+</script>
+</body>
+</html>

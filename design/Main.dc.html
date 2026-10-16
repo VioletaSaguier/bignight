@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Benchmark y propuesta</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&amp;family=Instrument+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#3B348F}a:hover{color:#231E66}
+</style>
+</helmet>
+<div style="width: 1440px; height: 3300px; box-sizing: border-box; padding: 88px 96px; background: #F4F1EC; color: #1B1A1F; font-family: 'Instrument Sans', sans-serif; display: flex; flex-direction: column; gap: 64px">
+
+<header style="display: flex; justify-content: space-between; align-items: flex-end; gap: 48px; border-bottom: 1px solid #1B1A1F; padding-bottom: 40px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 860px">
+<div style="font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: #5A5560">Noche Mágica / El Grandía · nombre a definir</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 14px">
+<span style="background: #1B1A1F; color: #F4F1EC; padding: 8px 12px; border-radius: 999px">Plan único · $ 150.000</span>
+<span style="background: #1B1A1F; color: #F4F1EC; padding: 8px 12px; border-radius: 999px">Se paga con Mercado Pago y la cuenta se habilita sola</span>
+<span style="background: #1B1A1F; color: #F4F1EC; padding: 8px 12px; border-radius: 999px">Sin comisión: el 100% del regalo va a los organizadores</span>
+<span style="background: #1B1A1F; color: #F4F1EC; padding: 8px 12px; border-radius: 999px">33 estilos en 4 categorías</span>
+<span style="background: #FFFFFF; color: #1B1A1F; border: 1px solid #1B1A1F; padding: 8px 12px; border-radius: 999px">Próxima versión: invitados con link personal y recordatorios por WhatsApp</span>
+</div>
+<h1 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 400; font-size: 76px; line-height: 1.02; letter-spacing: -0.02em">Una página para cada evento que <span style="font-style: italic; color: {{accent}}">se parezca a quien lo hace</span></h1>
+</div>
+<p style="margin: 0; max-width: 360px; font-size: 18px; line-height: 1.5; color: #3D3942">Benchmark de Confites y de plataformas similares en el mundo, y la propuesta de producto: qué tomamos, qué mejoramos y qué entra en una primera versión chica.</p>
+</header>
+
+<section style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<h2 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 600; font-size: 32px">Confites hoy</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.55; color: #3D3942">Lista de regalos + micrositio para casamientos. Tres planes de pago único (Silver US$ 130, Gold US$ 150, Platinum US$ 180) que suman secciones al mismo micrositio. Los regalos son simbólicos: el invitado elige un ítem con precio y a los novios les llega la transferencia.</p>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; font-size: 15px">
+<div style="background: #FFFFFF; border-radius: 12px; padding: 16px">Lista de regalos con transferencia</div>
+<div style="background: #FFFFFF; border-radius: 12px; padding: 16px">RSVP (desde Gold)</div>
+<div style="background: #FFFFFF; border-radius: 12px; padding: 16px">Eventos, cronograma y mapa</div>
+<div style="background: #FFFFFF; border-radius: 12px; padding: 16px">Galería, hashtag de Instagram</div>
+<div style="background: #FFFFFF; border-radius: 12px; padding: 16px">Playlist de Spotify y canción de fondo</div>
+<div style="background: #FFFFFF; border-radius: 12px; padding: 16px">Guía del invitado, mensaje, gift card</div>
+<div style="background: #FFFFFF; border-radius: 12px; padding: 16px">App con avisos de regalos y confirmaciones</div>
+<div style="background: #FFFFFF; border-radius: 12px; padding: 16px">Soporte por WhatsApp</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 20px">
+<h2 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 600; font-size: 32px">Dónde se queda corto</h2>
+<ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px; font-size: 17px; line-height: 1.45">
+<li style="display: flex; gap: 16px"><span style="font-family: 'Fraunces', serif; font-size: 22px; color: {{accent}}; min-width: 28px">1</span><span><strong>Una sola maqueta.</strong> Mismo scroll, misma tipografía, mismo orden; solo cambian textos y foto. Los planes suman secciones, no cambian el carácter.</span></li>
+<li style="display: flex; gap: 16px"><span style="font-family: 'Fraunces', serif; font-size: 22px; color: {{accent}}; min-width: 28px">2</span><span><strong>Lista genérica.</strong> Los ítems no hablan de la pareja ni de su viaje; el invitado elige por precio y nada más.</span></li>
+<li style="display: flex; gap: 16px"><span style="font-family: 'Fraunces', serif; font-size: 22px; color: {{accent}}; min-width: 28px">3</span><span><strong>Solo casamientos.</strong> Todo el discurso es nupcial; deja afuera cumpleaños, aniversarios, 15, bautismos.</span></li>
+<li style="display: flex; gap: 16px"><span style="font-family: 'Fraunces', serif; font-size: 22px; color: {{accent}}; min-width: 28px">4</span><span><strong>Incómoda en el teléfono.</strong> Un círculo gigante por pantalla, más de 60 ítems para scrollear y un checkout en ventana modal de 4 pasos pensado para escritorio.</span></li>
+<li style="display: flex; gap: 16px"><span style="font-family: 'Fraunces', serif; font-size: 22px; color: {{accent}}; min-width: 28px">5</span><span><strong>Termina el día del evento.</strong> No hay fotos de invitados ni ayuda para agradecer después.</span></li>
+</ol>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 24px">
+<h2 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 600; font-size: 32px">Benchmark: qué hace bien cada uno y qué nos llevamos</h2>
+<div style="display: grid; grid-template-columns: 200px minmax(0, 1fr) minmax(0, 1fr); background: #FFFFFF; border-radius: 16px; overflow: hidden; font-size: 15px; line-height: 1.45">
+<div style="padding: 14px 20px; background: #1B1A1F; color: #F4F1EC; font-weight: 600">Plataforma</div>
+<div style="padding: 14px 20px; background: #1B1A1F; color: #F4F1EC; font-weight: 600">Lo que hace bien</div>
+<div style="padding: 14px 20px; background: #1B1A1F; color: #F4F1EC; font-weight: 600">Lo que incorporamos</div>
+
+<div style="padding: 16px 20px; border-bottom: 1px solid #E6E1D8; font-weight: 600">Zola (EE.UU.)</div>
+<div style="padding: 16px 20px; border-bottom: 1px solid #E6E1D8">Regalo grupal: varios aportan a un ítem caro. Fondos de dinero sin comisión. Nota por regalo explicando por qué lo eligieron. Registro de quién regaló para agradecer.</div>
+<div style="padding: 16px 20px; border-bottom: 1px solid #E6E1D8">Barra de progreso en el regalo compartido (Confites ya lo permite, pero no muestra cuánto falta), “por qué lo elegimos” en cada regalo, lista de agradecimientos.</div>
+
+<div style="padding: 16px 20px; border-bottom: 1px solid #E6E1D8; font-weight: 600">Joy (EE.UU.)</div>
+<div style="padding: 16px 20px; border-bottom: 1px solid #E6E1D8">Varios eventos en un sitio, FAQ para invitados, info de viaje y alojamiento con mapas, álbum de fotos donde suben los invitados, cronograma por invitado.</div>
+<div style="padding: 16px 20px; border-bottom: 1px solid #E6E1D8">FAQ editable (dress code, estacionamiento, chicos), alojamiento sugerido, álbum compartido post-evento.</div>
+
+<div style="padding: 16px 20px; border-bottom: 1px solid #E6E1D8; font-weight: 600">Honeyfund</div>
+<div style="padding: 16px 20px; border-bottom: 1px solid #E6E1D8">Experiencias con nombre y precio en vez de un fondo anónimo; las grandes se parten en cuotas más chicas; la pareja cuenta la historia del viaje.</div>
+<div style="padding: 16px 20px; border-bottom: 1px solid #E6E1D8">Catálogo armado a partir del destino real (ej. masaje en Manuel Antonio si van a Costa Rica) y experiencias divisibles.</div>
+
+<div style="padding: 16px 20px; border-bottom: 1px solid #E6E1D8; font-weight: 600">Minted</div>
+<div style="padding: 16px 20px; border-bottom: 1px solid #E6E1D8">El sitio combina con la invitación impresa: misma ilustración y tipografía.</div>
+<div style="padding: 16px 20px; border-bottom: 1px solid #E6E1D8">“Desde tu invitación”: subís tu invitación y la página toma su paleta, tipografía y ornamentos.</div>
+
+<div style="padding: 16px 20px; border-bottom: 1px solid #E6E1D8; font-weight: 600">Bridebook (UK)</div>
+<div style="padding: 16px 20px; border-bottom: 1px solid #E6E1D8">En beta: genera un tema del sitio a partir de una descripción escrita del casamiento.</div>
+<div style="padding: 16px 20px; border-bottom: 1px solid #E6E1D8">Ajuste fino del estilo con palabras (“más oscuro”, “más floral”) sobre una base curada.</div>
+
+<div style="padding: 16px 20px; border-bottom: 1px solid #E6E1D8; font-weight: 600">Partiful</div>
+<div style="padding: 16px 20px; border-bottom: 1px solid #E6E1D8">Sirve para cualquier evento, temas y efectos con personalidad, RSVP sin bajar app, preguntas propias (ej. restricciones alimentarias), ver quién va, fotos después.</div>
+<div style="padding: 16px 20px; border-bottom: 1px solid #E6E1D8">Abrir a todo tipo de evento, preguntas personalizadas en el RSVP, link que se comparte por WhatsApp sin cuenta.</div>
+
+<div style="padding: 16px 20px; font-weight: 600">Mi Lista de Novios (Chile)</div>
+<div style="padding: 16px 20px">Mismo modelo que Confites (regalos simbólicos que llegan como dinero), validado como líder local.</div>
+<div style="padding: 16px 20px">Confirma que el modelo de transferencia funciona en la región: lo mantenemos.</div>
+</div>
+</section>
+
+<section style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
+<div style="background: #1B1A1F; color: #F4F1EC; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #B9B2C4">Pilar 1</div>
+<h3 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 400; font-size: 30px; line-height: 1.15">Estilos de verdad, no una plantilla</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #D8D3DF">Pocos mundos (Romántico, Gótico, Fiesta, Editorial) que cambian layout, tipografía, ritmo y ornamentos, no solo colores. Más “Desde tu invitación”: la página adopta la estética de la invitación que subas.</p>
+</div>
+<div style="background: #1B1A1F; color: #F4F1EC; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #B9B2C4">Pilar 2</div>
+<h3 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 400; font-size: 30px; line-height: 1.15">Regalos que hablan de ustedes</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #D8D3DF">Quien organiza cuenta su destino, gustos y rango de precios; se genera una lista de experiencias acorde, editable. El invitado filtra, ordena por precio y puede aportar una parte.</p>
+</div>
+<div style="background: #1B1A1F; color: #F4F1EC; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #B9B2C4">Pilar 3</div>
+<h3 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 400; font-size: 30px; line-height: 1.15">Cualquier celebración</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #D8D3DF">Casamiento, cumpleaños, aniversario, 15, bautismo. El lenguaje se adapta al tipo de evento (“los novios”, “Caro”, “la familia”).</p>
+</div>
+</section>
+
+<section style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 600; font-size: 32px">La lista de Confites por dentro</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.55; color: #3D3942">Revisada en la lista de Clara e Ignacio.</p>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 16px; line-height: 1.45">
+<li>Unos 65 ítems genéricos en pesos, de AR$ 70.000 a AR$ 6.220.000: sillones, heladera y Thermomix mezclados con buceo, pasajes y spa.</li>
+<li>Filtros por categoría (Luna de miel, Living, Cocina…), por 5 rangos de precio y por nombre. No hay orden por precio.</li>
+<li>En el teléfono la grilla queda de a un círculo grande por pantalla.</li>
+<li>Checkout en ventana de 4 pasos: elegir moneda (ARS o USD si la pareja tiene cuentas en ambas), regalo solo o compartido, datos con dedicatoria, confirmar y pagar con los métodos que eligió la pareja.</li>
+<li>Bien resuelto y lo mantenemos: regalo compartido, dedicatoria, doble moneda, carrito con varios regalos.</li>
+</ul>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 600; font-size: 32px">Cómo cobramos</h2>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 16px; line-height: 1.45">
+<li><strong>Mercado Pago como marketplace:</strong> quien organiza vincula su cuenta una vez y cada regalo le entra directo. La plataforma cobra su comisión en el mismo pago (marketplace fee).</li>
+<li><strong>Tarjeta en cuotas, dinero en cuenta y débito</strong> dentro del mismo checkout de Mercado Pago.</li>
+<li><strong>Transferencia por alias o CVU</strong> con botón de copiar; el invitado marca “ya transferí” y quien organiza lo confirma en el panel.</li>
+<li><strong>Dólares</strong> para invitados de afuera: tarjeta internacional por una pasarela a definir, o cuenta en USD de la pareja.</li>
+<li>Comisión, quién la absorbe y pasarela internacional: [A DEFINIR].</li>
+</ul>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 600; font-size: 32px">Tendencias 2026 que usamos para los estilos</h2>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; font-size: 15px; line-height: 1.45">
+<div style="background: #FFFFFF; border-radius: 12px; padding: 16px"><strong>Editorial minimal:</strong> la tipografía manda, fechas enormes, mucho aire y un solo acento.</div>
+<div style="background: #FFFFFF; border-radius: 12px; padding: 16px"><strong>Groovy retro:</strong> damero, bordes ondulados, rojo cereza y crema, letras gorditas.</div>
+<div style="background: #FFFFFF; border-radius: 12px; padding: 16px"><strong>Huerto mediterráneo:</strong> limones y naranjas, azulejos, bordes festoneados.</div>
+<div style="background: #FFFFFF; border-radius: 12px; padding: 16px"><strong>Neo Deco:</strong> art déco depurado, geometría, cromo y mármol rojo.</div>
+<div style="background: #FFFFFF; border-radius: 12px; padding: 16px"><strong>Celestial:</strong> estrellas, lunas, brillos opalescentes.</div>
+<div style="background: #FFFFFF; border-radius: 12px; padding: 16px"><strong>Cuaderno ilustrado:</strong> dibujos a línea en un solo color, como un sketchbook.</div>
+<div style="background: #FFFFFF; border-radius: 12px; padding: 16px"><strong>Vamp romantic:</strong> oscuro, terciopelo, rojos profundos, velas (nuestro Gótico).</div>
+<div style="background: #FFFFFF; border-radius: 12px; padding: 16px"><strong>Botánico suave:</strong> crema, rosa empolvado y salvia, arcos (nuestro Romántico).</div>
+<div style="background: #FFFFFF; border-radius: 12px; padding: 16px"><strong>FunHaus:</strong> rayas de circo y formas grandes (base de Fiesta pop).</div>
+</div>
+</section>
+
+<section style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 600; font-size: 32px">Lo que se repite en Pinterest</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.5; color: #3D3942">Relevado en las búsquedas de invitaciones trendy, minimal y pintadas a mano.</p>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 16px; line-height: 1.45">
+<li>Firma manuscrita en rojo sobre papel crema, con datos en mayúsculas espaciadas.</li>
+<li>Minimal casi vacío: tipografía chiquita centrada, mucho aire, tonos arena.</li>
+<li>Una sola forma pintada (un corazón rojo) o tipografía repetida como textura.</li>
+<li>Dibujo a línea del lugar o del paisaje en un solo color.</li>
+<li>Foto en blanco y negro intervenida con garabatos en azul cobalto.</li>
+<li>Gouache o acuarela naïf: botellas, copas, velas, frutas, el lugar pintado.</li>
+<li>Rayas de toldo en pasteles, marcos ondulados, bloques de color fuertes.</li>
+<li>Nombres enormes en tipografía de afiche con un dibujo a línea de la pareja.</li>
+</ul>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 600; font-size: 32px">Regalos arriba</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.5; color: #3D3942">Para el invitado, regalar y confirmar son las dos tareas principales. Por eso la página cambia de orden en todos los estilos.</p>
+<ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 16px; line-height: 1.45">
+<li>Portada con nombres y fecha.</li>
+<li>Dos botones del mismo peso: Confirmar y Regalar.</li>
+<li>Regalos destacados (3 o 4, con precio) y “Ver todos”.</li>
+<li>Cuándo y dónde, cronograma, dress code, preguntas.</li>
+<li>Formulario de confirmación completo.</li>
+<li>Barra fija abajo con Confirmar y Regalar siempre a mano.</li>
+</ol>
+</div>
+</section>
+
+<section style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 600; font-size: 32px">Primera versión (chica)</h2>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 17px; line-height: 1.45">
+<li>Página del evento en 24 estilos (5 paletas en los minimal) + “Desde tu invitación” (paleta y tipografía)</li>
+<li>Regalos con la misma jerarquía que la confirmación en todas las páginas</li>
+<li>Tono de voz elegible: formal, cálido, descontracturado o divertido</li>
+<li>Datos: cuándo y dónde, cronograma, mapa, dress code, FAQ</li>
+<li>RSVP con preguntas propias (acompañante, alimentación)</li>
+<li>Rango de precios + lista predeterminada o personalizada a partir de un texto con sus intereses</li>
+<li>Lista compacta en el teléfono: filas, rangos de precio, orden y carrito fijo</li>
+<li>Cobro con Mercado Pago (cuotas) y transferencia por alias; regalo compartido</li>
+<li>Panel simple: confirmados, regalos recibidos, mensajes</li>
+</ul>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 600; font-size: 32px; color: #5A5560">Después</h2>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 17px; line-height: 1.45; color: #5A5560">
+<li>Pago en dólares con tarjeta internacional</li>
+<li>Álbum de fotos de invitados y lista de agradecimientos</li>
+<li>Ajuste del estilo describiéndolo con palabras</li>
+<li>Más estilos, dominio propio, versión en inglés para invitados de afuera</li>
+<li>Precios del producto: [A DEFINIR]</li>
+</ul>
+</div>
+</section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#3B348F","options":["#3B348F","#8E1B2B","#C2410C"]},"$preview":{"width":1440,"height":3300}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#3B348F' };
+  }
+}
+</script>
+</body>
+</html>

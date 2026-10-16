@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Afiche tipográfico</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Work+Sans:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1C1C1C}a:hover{color:#000000}
+</style>
+</helmet>
+<div style="width: 390px; height: 1400px; box-sizing: border-box; background: #E9E7E1; color: #1C1C1C; font-family: 'Work Sans', sans-serif; position: relative; overflow: hidden">
+<div style="padding: 30px 22px 120px; display: flex; flex-direction: column; gap: 24px">
+<h1 style="margin: 0; font-family: 'Anton', sans-serif; font-weight: 400; font-size: 96px; line-height: 0.9; letter-spacing: -0.01em">MEGAN<br><span style="color: {{accent}}">&amp;</span> LEO</h1>
+<svg width="346" height="250" viewBox="0 0 346 250" fill="none" stroke="#1C1C1C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="150" cy="40" r="16"/><circle cx="190" cy="44" r="15"/><path d="M150 56 C140 80 132 120 128 160 L120 246 M150 56 C162 84 168 120 166 160 L160 246"/><path d="M190 59 C200 82 214 120 220 160 L232 246 M190 59 C180 86 176 120 178 160 L182 246"/><path d="M134 96 C160 110 186 108 212 96"/><path d="M212 96 C236 70 250 60 262 50 M262 50 C258 40 270 34 274 42 C282 32 292 40 284 48 C294 50 290 62 280 60 C278 70 266 68 266 58"/></svg>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); font-size: 12px; line-height: 1.5; text-transform: uppercase; border-top: 2px solid #1C1C1C; padding-top: 10px"><span>Te invitamos<br>a celebrar<br>nuestro casamiento</span><span style="text-align: right">23 · 06 · 27<br>Hotel [NOMBRE]<br>San Isidro</span></div>
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<a href="#" style="text-align: center; font-family: 'Anton', sans-serif; font-size: 18px; letter-spacing: 0.04em; padding: 14px; border: 2px solid #1C1C1C; text-decoration: none">CONFIRMAR</a>
+<a href="Regalos.dc.html" style="text-align: center; font-family: 'Anton', sans-serif; font-size: 18px; letter-spacing: 0.04em; padding: 14px; background: {{accent}}; color: #E9E7E1; border: 2px solid {{accent}}; text-decoration: none">REGALANOS</a>
+</div>
+
+<section style="display: flex; flex-direction: column; gap: 0">
+<div style="font-family: 'Anton', sans-serif; font-size: 40px; line-height: 1; margin-bottom: 8px">REGALANOS</div>
+<a href="Regalos.dc.html" style="display: flex; justify-content: space-between; padding: 12px 0; border-top: 2px solid #1C1C1C; font-size: 15px; text-decoration: none"><span>Cena de aniversario</span><span>$ 80.000</span></a>
+<a href="Regalos.dc.html" style="display: flex; justify-content: space-between; padding: 12px 0; border-top: 2px solid #1C1C1C; font-size: 15px; text-decoration: none"><span>Bicicletas para la casa</span><span>$ 450.000</span></a>
+<a href="Regalos.dc.html" style="display: flex; justify-content: space-between; padding: 12px 0; border-top: 2px solid #1C1C1C; border-bottom: 2px solid #1C1C1C; font-size: 15px; text-decoration: none"><span>Viaje a Japón · compartido</span><span>27%</span></a>
+<div style="display: flex; justify-content: space-between; align-items: center; padding-top: 6px"><span style="font-size: 12px; text-transform: uppercase">En pesos · también en dólares</span><a href="Regalos.dc.html" style="font-weight: 500; font-size: 14px; padding: 10px 0">VER TODO →</a></div>
+</section>
+</div>
+<div style="position: absolute; left: 0; right: 0; bottom: 0; padding: 12px 16px 20px; background: #E9E7E1; border-top: 2px solid #1C1C1C; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<a href="#" style="text-align: center; font-family: 'Anton', sans-serif; font-size: 17px; padding: 12px; border: 2px solid #1C1C1C; text-decoration: none">CONFIRMAR</a>
+<a href="Regalos.dc.html" style="text-align: center; font-family: 'Anton', sans-serif; font-size: 17px; padding: 12px; background: {{accent}}; color: #E9E7E1; text-decoration: none">REGALANOS</a>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#C2401F","options":["#C2401F","#1C1C1C","#2D5BD2"]},"$preview":{"width":390,"height":1400}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#C2401F' };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Flujo de pago</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#7A2E3A}a:hover{color:#5A1F29}
+</style>
+</helmet>
+<div style="width: 1840px; height: 960px; box-sizing: border-box; background: #E9E1DC; padding: 40px 50px; display: flex; gap: 60px; font-family: 'Jost', sans-serif; color: #3A2A2C">
+
+<div style="width: 390px; height: 844px; flex-shrink: 0; background: #F7EFEA; border-radius: 28px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(58,42,44,0.14)">
+<div style="padding: 20px 20px 12px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; gap: 6px" aria-hidden="true"><div style="flex-grow: 1; height: 3px; background: #7A2E3A"></div><div style="flex-grow: 1; height: 3px; background: #E6D3CC"></div><div style="flex-grow: 1; height: 3px; background: #E6D3CC"></div></div>
+<div style="font-size: 13px; color: #6B5557">Paso 1 de 3</div>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 34px">Tu regalo</h2>
+</div>
+<div style="padding: 0 20px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1">
+<div style="display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; gap: 12px; align-items: center; background: #FFFAF7; border: 1px solid #EADBD5; border-radius: 14px; padding: 8px"><div style="width: 52px; height: 52px; border-radius: 10px; background: #E8D5CF"></div><div style="font-size: 15px">Masaje para dos</div><div style="font-size: 15px">172.000</div></div>
+<div style="display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; gap: 12px; align-items: center; background: #FFFAF7; border: 1px solid #EADBD5; border-radius: 14px; padding: 8px"><div style="width: 52px; height: 52px; border-radius: 10px; background: #F0DCCB"></div><div style="font-size: 15px">Cena de pescado en la playa</div><div style="font-size: 15px">550.000</div></div>
+<div style="background: #FFFAF7; border: 1px solid #7A2E3A; border-radius: 14px; padding: 12px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 12px; align-items: center"><div style="width: 52px; height: 52px; border-radius: 10px; background: #E2D8E8"></div><div><div style="font-size: 15px">Dos pasajes · compartido</div><div style="font-size: 12px; color: #6B5557">Faltan AR$ 1.295.000 de 1.850.000</div></div></div>
+<div style="font-size: 13px">¿Cuánto querés aportar?</div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px">
+<button type="button" style="font: inherit; font-size: 13px; padding: 10px 2px; border-radius: 10px; border: 1px solid #D9BDB5; background: transparent; color: #3A2A2C">50 mil</button>
+<button type="button" style="font: inherit; font-size: 13px; padding: 10px 2px; border-radius: 10px; border: 1px solid #7A2E3A; background: #7A2E3A; color: #FFF8F5">100 mil</button>
+<button type="button" style="font: inherit; font-size: 13px; padding: 10px 2px; border-radius: 10px; border: 1px solid #D9BDB5; background: transparent; color: #3A2A2C">200 mil</button>
+<button type="button" style="font: inherit; font-size: 13px; padding: 10px 2px; border-radius: 10px; border: 1px solid #D9BDB5; background: transparent; color: #3A2A2C">Otro</button>
+</div>
+</div>
+<a href="Regalos.dc.html" style="font-size: 14px; padding: 8px 0">+ Sumar otro regalo</a>
+</div>
+<div style="padding: 16px 20px 24px; border-top: 1px solid #E6D3CC; background: #FFFAF7; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; font-size: 17px"><span>Total</span><span style="font-weight: 500">AR$ 822.000</span></div>
+<div style="font-size: 12px; color: #6B5557">El 100% va a Lu y Fran.</div>
+<button type="button" style="font: inherit; font-size: 16px; font-weight: 500; padding: 16px; border: none; border-radius: 999px; background: #7A2E3A; color: #FFF8F5">Seguir</button>
+</div>
+</div>
+
+<div style="width: 390px; height: 844px; flex-shrink: 0; background: #F7EFEA; border-radius: 28px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(58,42,44,0.14)">
+<div style="padding: 20px 20px 12px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; gap: 6px" aria-hidden="true"><div style="flex-grow: 1; height: 3px; background: #7A2E3A"></div><div style="flex-grow: 1; height: 3px; background: #7A2E3A"></div><div style="flex-grow: 1; height: 3px; background: #E6D3CC"></div></div>
+<div style="font-size: 13px; color: #6B5557">Paso 2 de 3</div>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 34px">Unas palabras</h2>
+</div>
+<div style="padding: 0 20px; display: flex; flex-direction: column; gap: 14px; flex-grow: 1">
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px">Tu nombre<input type="text" value="Sofi Ramírez" style="font: inherit; font-size: 16px; padding: 13px; border: 1px solid #D9BDB5; border-radius: 12px; background: #FFFAF7; color: #3A2A2C"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px">Dedicatoria<textarea rows="3" style="font: inherit; font-size: 16px; padding: 13px; border: 1px solid #D9BDB5; border-radius: 12px; background: #FFFAF7; color: #3A2A2C; resize: none">¡Que sea el viaje de sus vidas! Los quiero.</textarea></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px">Email para el comprobante<input type="email" placeholder="opcional" style="font: inherit; font-size: 16px; padding: 13px; border: 1px solid #D9BDB5; border-radius: 12px; background: #FFFAF7; color: #3A2A2C"></label>
+<label style="display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 14px; padding: 4px 0">Que Lu y Fran vean el monto<input type="checkbox" checked style="width: 22px; height: 22px; accent-color: #7A2E3A"></label>
+<div style="font-size: 13px; color: #6B5557">Así se va a ver tu mensaje:</div>
+<div style="background: #FFFAF7; border: 1px solid #D9BDB5; border-radius: 4px; padding: 18px; text-align: center; display: flex; flex-direction: column; gap: 6px">
+<div style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; line-height: 1.3">“¡Que sea el viaje de sus vidas! Los quiero.”</div>
+<div style="font-size: 13px">Sofi · masaje, cena y un pedacito de pasaje</div>
+</div>
+</div>
+<div style="padding: 16px 20px 24px; border-top: 1px solid #E6D3CC; background: #FFFAF7">
+<button type="button" style="width: 100%; font: inherit; font-size: 16px; font-weight: 500; padding: 16px; border: none; border-radius: 999px; background: #7A2E3A; color: #FFF8F5">Ir a pagar</button>
+</div>
+</div>
+
+<div style="width: 390px; height: 844px; flex-shrink: 0; background: #F7EFEA; border-radius: 28px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(58,42,44,0.14)">
+<div style="padding: 20px 20px 12px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; gap: 6px" aria-hidden="true"><div style="flex-grow: 1; height: 3px; background: #7A2E3A"></div><div style="flex-grow: 1; height: 3px; background: #7A2E3A"></div><div style="flex-grow: 1; height: 3px; background: #7A2E3A"></div></div>
+<div style="font-size: 13px; color: #6B5557">Paso 3 de 3</div>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 34px">¿Cómo pagás?</h2>
+</div>
+<div style="padding: 0 20px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1">
+<label style="display: flex; gap: 12px; align-items: flex-start; background: #FFFAF7; border: 2px solid #7A2E3A; border-radius: 14px; padding: 14px"><input type="radio" name="pm" checked style="width: 20px; height: 20px; margin: 2px 0 0; accent-color: #7A2E3A"><span style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 16px; font-weight: 500">Mercado Pago</span><span style="font-size: 13px; color: #6B5557">Tarjeta de crédito en cuotas, débito o dinero en cuenta. Te lleva a pagar y volvés acá.</span></span></label>
+<label style="display: flex; gap: 12px; align-items: flex-start; background: #FFFAF7; border: 1px solid #EADBD5; border-radius: 14px; padding: 14px"><input type="radio" name="pm" style="width: 20px; height: 20px; margin: 2px 0 0; accent-color: #7A2E3A"><span style="display: flex; flex-direction: column; gap: 8px; flex-grow: 1"><span style="font-size: 16px; font-weight: 500">Transferencia</span><span style="display: flex; justify-content: space-between; align-items: center; background: #F7EFEA; border-radius: 10px; padding: 8px 10px; font-size: 14px"><span>Alias: lu.fran.costarica</span><span style="font-size: 13px; color: #7A2E3A">Copiar</span></span><span style="font-size: 13px; color: #6B5557">Después tocás “Ya transferí” y les avisamos.</span></span></label>
+<label style="display: flex; gap: 12px; align-items: flex-start; background: #FFFAF7; border: 1px solid #EADBD5; border-radius: 14px; padding: 14px"><input type="radio" name="pm" style="width: 20px; height: 20px; margin: 2px 0 0; accent-color: #7A2E3A"><span style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 16px; font-weight: 500">Tarjeta del exterior (USD)</span><span style="font-size: 13px; color: #6B5557">Para invitados de afuera. Pasarela a definir.</span></span></label>
+<div style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #6B5557; padding-top: 4px"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#6B5557" stroke-width="1.5" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5"/><path d="M5 7 V5 a3 3 0 0 1 6 0 V7"/></svg>Pago protegido. El 100% de lo que pagás va a Lu y Fran.</div>
+</div>
+<div style="padding: 16px 20px 24px; border-top: 1px solid #E6D3CC; background: #FFFAF7; display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; justify-content: space-between; font-size: 14px; color: #6B5557"><span>Regalos</span><span>AR$ 822.000</span></div>
+<div style="display: flex; justify-content: space-between; font-size: 14px; color: #6B5557"><span>Llega a Lu y Fran</span><span>100%</span></div>
+<button type="button" style="font: inherit; font-size: 16px; font-weight: 500; padding: 16px; border: none; border-radius: 999px; background: #7A2E3A; color: #FFF8F5">Pagar AR$ 822.000</button>
+</div>
+</div>
+
+<div style="width: 390px; height: 844px; flex-shrink: 0; background: #7A2E3A; color: #FFF8F5; border-radius: 28px; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; padding: 32px; box-sizing: border-box; text-align: center; box-shadow: 0 10px 30px rgba(58,42,44,0.14)">
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#FFF8F5" stroke-width="2" aria-hidden="true"><circle cx="32" cy="32" r="30"/><path d="M20 33 L28 41 L45 23"/></svg>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 44px; line-height: 1">¡Gracias, Sofi!</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.55">Lu y Fran ya recibieron tu regalo y tu mensaje. Te mandamos el comprobante por mail.</p>
+<div style="width: 100%; background: #FFF8F5; color: #3A2A2C; border-radius: 4px; padding: 18px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #7A2E3A">Dos pasajes</div>
+<div style="height: 6px; background: #EFE2DC; border-radius: 3px; overflow: hidden"><div style="height: 100%; width: 35%; background: #7A2E3A"></div></div>
+<div style="font-size: 13px">Con tu aporte ya juntaron el 35%</div>
+</div>
+<a href="Romantico.dc.html" style="width: 100%; box-sizing: border-box; font-size: 16px; font-weight: 500; padding: 16px; border-radius: 999px; background: #FFF8F5; color: #7A2E3A; text-decoration: none">¿Ya confirmaste si venís?</a>
+<a href="Romantico.dc.html" style="font-size: 15px; color: #FFF8F5; padding: 8px">Volver a la página</a>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1840,"height":960}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

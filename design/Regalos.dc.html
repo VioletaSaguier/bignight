@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Regalos de Lu y Fran</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#7A2E3A}a:hover{color:#5A1F29}
+</style>
+</helmet>
+<div style="width: 390px; height: 1500px; box-sizing: border-box; background: #F7EFEA; color: #3A2A2C; font-family: 'Jost', sans-serif; font-weight: 400; display: flex; flex-direction: column">
+
+<div style="padding: 14px 16px 12px; display: flex; flex-direction: column; gap: 12px; background: #F7EFEA; border-bottom: 1px solid #E6D3CC">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<a href="Romantico.dc.html" style="font-size: 14px; text-decoration: none; padding: 10px 0">← Lu &amp; Fran</a>
+<div style="display: flex; border: 1px solid #D9BDB5; border-radius: 999px; overflow: hidden">
+<button type="button" onClick="{{toList}}" aria-label="Ver como lista" style="{{listBtn}}"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 4 H15 M3 9 H15 M3 14 H15"/></svg></button>
+<button type="button" onClick="{{toGrid}}" aria-label="Ver como grilla" style="{{gridBtn}}"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="5" height="5"/><rect x="10" y="3" width="5" height="5"/><rect x="3" y="10" width="5" height="5"/><rect x="10" y="10" width="5" height="5"/></svg></button>
+</div>
+</div>
+<h1 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-style: italic; font-size: 32px; line-height: 1">Regalanos un pedacito de Costa Rica</h1>
+<div style="display: flex; align-items: center; gap: 8px; font-size: 13px; background: #FFFAF7; border: 1px solid #E6D3CC; border-radius: 10px; padding: 10px 12px"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#7A2E3A" stroke-width="1.6" aria-hidden="true"><path d="M8 14 C4 11 1.5 8.5 1.5 5.5 C1.5 3.5 3 2 5 2 C6.3 2 7.4 2.8 8 3.8 C8.6 2.8 9.7 2 11 2 C13 2 14.5 3.5 14.5 5.5 C14.5 8.5 12 11 8 14 Z"/></svg><span>El 100% de lo que regales va a Lu y Fran. Pagás en pesos o dólares.</span></div>
+<label style="display: flex; align-items: center; gap: 8px; background: #FFFAF7; border: 1px solid #E6D3CC; border-radius: 12px; padding: 0 12px; font-size: 14px"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#8A6F70" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="7" r="5"/><path d="M11 11 L14 14"/></svg><input type="search" aria-label="Buscar regalo" placeholder="Buscar: surf, cena, pasaje…" style="flex-grow: 1; font: inherit; font-size: 15px; padding: 12px 0; border: none; background: transparent; color: #3A2A2C"></label>
+<div style="display: flex; gap: 6px; overflow-x: auto; padding-bottom: 2px">
+<sc-for list="{{ranges}}" as="r" hint-placeholder-count="5">
+<button type="button" onClick="{{r.pick}}" style="{{r.style}}">{{r.label}}</button>
+</sc-for>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #6B5557">
+<span>{{count}} regalos · desde AR$ 75.000</span>
+<button type="button" onClick="{{toggleSort}}" style="font: inherit; font-size: 13px; padding: 8px 0 8px 12px; border: none; background: transparent; color: #7A2E3A">Precio: {{sortLabel}} ⇅</button>
+</div>
+</div>
+
+<div style="flex-grow: 1; overflow-y: auto; padding: 12px 16px 16px">
+<sc-if value="{{isList}}" hint-placeholder-val="{{true}}">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<sc-for list="{{items}}" as="it" hint-placeholder-count="8">
+<div style="display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; gap: 12px; align-items: center; background: #FFFAF7; border: 1px solid #EADBD5; border-radius: 14px; padding: 8px 10px 8px 8px">
+<div style="width: 64px; height: 64px; border-radius: 10px; background: {{it.tone}}; display: flex; align-items: flex-end; padding: 4px; box-sizing: border-box; font-size: 10px; color: #5A4446">{{it.place}}</div>
+<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<div style="font-size: 15px; font-weight: 500; line-height: 1.2">{{it.name}}</div>
+<div style="font-size: 14px">AR$ {{it.priceLabel}}</div>
+<sc-if value="{{it.group}}" hint-placeholder-val="{{false}}"><div style="display: flex; align-items: center; gap: 6px; font-size: 11px; color: #6B5557"><div style="width: 60px; height: 4px; background: #EFE2DC; border-radius: 2px; overflow: hidden"><div style="{{it.bar}}"></div></div>{{it.groupLabel}}</div></sc-if>
+</div>
+<button type="button" onClick="{{it.toggle}}" aria-label="{{it.aria}}" style="{{it.btnStyle}}">{{it.btnText}}</button>
+</div>
+</sc-for>
+</div>
+</sc-if>
+<sc-if value="{{isGrid}}" hint-placeholder-val="{{false}}">
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<sc-for list="{{items}}" as="it" hint-placeholder-count="6">
+<div style="background: #FFFAF7; border: 1px solid #EADBD5; border-radius: 14px; overflow: hidden; display: flex; flex-direction: column">
+<div style="height: 96px; background: {{it.tone}}; padding: 8px; box-sizing: border-box; font-size: 11px; color: #5A4446; display: flex; align-items: flex-end">{{it.place}}</div>
+<div style="padding: 10px; display: flex; flex-direction: column; gap: 4px; flex-grow: 1">
+<div style="font-size: 14px; font-weight: 500; line-height: 1.2">{{it.name}}</div>
+<div style="font-size: 13px">AR$ {{it.priceLabel}}</div>
+<button type="button" onClick="{{it.toggle}}" style="{{it.gridBtnStyle}}">{{it.gridBtnText}}</button>
+</div>
+</div>
+</sc-for>
+</div>
+</sc-if>
+</div>
+
+<div style="padding: 12px 16px 20px; background: #FFFAF7; border-top: 1px solid #E6D3CC; display: flex; align-items: center; gap: 12px">
+<div style="flex-grow: 1; display: flex; flex-direction: column"><span style="font-size: 13px; color: #6B5557">{{cartCount}}</span><span style="font-size: 18px; font-weight: 500">AR$ {{cartTotal}}</span></div>
+<a href="Pago.dc.html" style="font-size: 15px; font-weight: 500; padding: 14px 22px; background: #7A2E3A; color: #FFF8F5; border-radius: 999px; text-decoration: none">Regalar</a>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1500}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { range: 'todos', asc: true, view: 'list', cart: [3, 9] };
+  }
+  renderVals() {
+    const all = [
+      { id: 1, name: 'Desayuno con vista al mar', place: 'Tamarindo', price: 75000, tone: '#F2E4D8' },
+      { id: 2, name: 'Tour de café con cata', place: 'Valle Central', price: 120000, tone: '#E3D2BF' },
+      { id: 3, name: 'Masaje para dos', place: 'Manuel Antonio', price: 172000, tone: '#E8D5CF' },
+      { id: 4, name: 'Clase de surf para dos', place: 'Nosara', price: 208500, tone: '#CFE0E0' },
+      { id: 5, name: 'Avistaje de perezosos', place: 'Monteverde', price: 190600, tone: '#D6DDC8' },
+      { id: 6, name: 'Canopy en el bosque nuboso', place: 'Monteverde', price: 255000, tone: '#D3DCC6' },
+      { id: 7, name: 'Kayak al atardecer', place: 'Golfo de Papagayo', price: 300500, tone: '#D9E3EA' },
+      { id: 8, name: 'Snorkel en Isla Tortuga', place: 'Puntarenas', price: 357000, tone: '#CDE2E6' },
+      { id: 9, name: 'Cena de pescado en la playa', place: 'Santa Teresa', price: 550000, tone: '#F0DCCB' },
+      { id: 10, name: 'Noche en eco-lodge', place: 'Volcán Arenal', price: 435000, tone: '#D9CFC4' },
+      { id: 11, name: 'Pasaje para uno', place: 'Buenos Aires – San José', price: 1280000, tone: '#E6DCE6', group: true, raised: 64 },
+      { id: 12, name: 'Dos pasajes', place: 'Buenos Aires – San José', price: 1850000, tone: '#E2D8E8', group: true, raised: 30 }
+    ];
+    const ranges = [
+      { id: 'todos', label: 'Todos', test: () => true },
+      { id: 'r1', label: 'Hasta 150 mil', test: (p) => p <= 150000 },
+      { id: 'r2', label: '150 a 300 mil', test: (p) => p > 150000 && p <= 300000 },
+      { id: 'r3', label: '300 mil a 1 M', test: (p) => p > 300000 && p <= 1000000 },
+      { id: 'r4', label: 'Más de 1 M', test: (p) => p > 1000000 }
+    ];
+    const fmt = (n) => n.toLocaleString('es-AR');
+    const cur = ranges.find((r) => r.id === this.state.range) || ranges[0];
+    const chip = 'flex-shrink: 0; font-family: inherit; font-size: 13px; padding: 9px 13px; border-radius: 999px; ';
+    const list = all.filter((x) => cur.test(x.price)).sort((a, b) => this.state.asc ? a.price - b.price : b.price - a.price);
+    const inCart = (id) => this.state.cart.indexOf(id) >= 0;
+    const toggle = (id) => () => this.setState({ cart: inCart(id) ? this.state.cart.filter((c) => c !== id) : this.state.cart.concat([id]) });
+    const cartItems = all.filter((x) => inCart(x.id));
+    const viewBtn = (on) => 'font: inherit; width: 44px; height: 36px; display: flex; align-items: center; justify-content: center; border: none; ' + (on ? 'background: #7A2E3A; color: #FFF8F5;' : 'background: transparent; color: #3A2A2C;');
+    return {
+      ranges: ranges.map((r) => ({
+        label: r.label,
+        pick: () => this.setState({ range: r.id }),
+        style: chip + (r.id === this.state.range ? 'border: 1px solid #7A2E3A; background: #7A2E3A; color: #FFF8F5;' : 'border: 1px solid #D9BDB5; background: #FFFAF7; color: #3A2A2C;')
+      })),
+      items: list.map((x) => {
+        const on = inCart(x.id);
+        return {
+          ...x,
+          priceLabel: fmt(x.price),
+          group: !!x.group,
+          bar: 'height: 100%; background: #7A2E3A; width: ' + (x.raised || 0) + '%',
+          groupLabel: x.group ? ('Compartido · ' + x.raised + '% juntado') : '',
+          toggle: toggle(x.id),
+          aria: on ? 'Quitar ' + x.name : 'Agregar ' + x.name,
+          btnText: on ? '✓' : '+',
+          btnStyle: 'width: 44px; height: 44px; border-radius: 50%; font: inherit; font-size: 20px; ' + (on ? 'border: 1px solid #7A2E3A; background: #7A2E3A; color: #FFF8F5;' : 'border: 1px solid #C9A39A; background: transparent; color: #7A2E3A;'),
+          gridBtnText: on ? 'Agregado ✓' : (x.group ? 'Aportar' : 'Agregar'),
+          gridBtnStyle: 'margin-top: auto; font: inherit; font-size: 13px; padding: 10px; border-radius: 999px; ' + (on ? 'border: 1px solid #7A2E3A; background: #7A2E3A; color: #FFF8F5;' : 'border: 1px solid #C9A39A; background: transparent; color: #7A2E3A;')
+        };
+      }),
+      count: list.length,
+      sortLabel: this.state.asc ? 'menor a mayor' : 'mayor a menor',
+      toggleSort: () => this.setState({ asc: !this.state.asc }),
+      isList: this.state.view === 'list',
+      isGrid: this.state.view === 'grid',
+      toList: () => this.setState({ view: 'list' }),
+      toGrid: () => this.setState({ view: 'grid' }),
+      listBtn: viewBtn(this.state.view === 'list'),
+      gridBtn: viewBtn(this.state.view === 'grid'),
+      cartCount: cartItems.length === 1 ? '1 regalo elegido' : cartItems.length + ' regalos elegidos',
+      cartTotal: fmt(cartItems.reduce((s, x) => s + x.price, 0))
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Línea · Costa</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&amp;family=Karla:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="{{root}}">
+<div style="padding: 48px 28px 120px; display: flex; flex-direction: column; align-items: center; gap: 26px; text-align: center">
+<div style="font-size: 12px; letter-spacing: 0.3em">NOS CASAMOS FRENTE AL MAR</div>
+<h1 style="margin: 0; font-family: 'Italiana', serif; font-weight: 400; font-size: 60px; line-height: 1">Lucía<br>&amp; Tomás</h1>
+<svg width="320" height="160" viewBox="0 0 320 160" fill="none" stroke="{{ink}}" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M250 120 L256 40 H272 L278 120 Z M252 70 H276 M254 96 H274 M256 40 L264 28 L272 40"/><path d="M262 22 L262 28"/><path d="M60 110 H150 L140 122 H70 Z M104 110 V40 L148 104 H104 M100 50 L66 104 H100"/><path d="M0 132 C20 126 40 138 60 132 C80 126 100 138 120 132 C140 126 160 138 180 132 C200 126 220 138 240 132 C260 126 280 138 300 132 C310 129 316 130 320 132"/><path d="M20 146 C40 140 60 152 80 146 C100 140 120 152 140 146 C160 140 180 152 200 146 C220 140 240 152 260 146"/><path d="M190 30 C196 24 202 24 206 30 M206 30 C210 24 216 24 222 30"/><path d="M40 40 C44 36 48 36 50 40 M50 40 C52 36 56 36 60 40"/></svg>
+<div style="font-size: 17px; line-height: 1.55">Viernes 21 de enero · 18:30<br><span style="font-style: italic">Parador [NOMBRE], José Ignacio</span></div>
+<div style="width: 100%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<a href="#" style="{{ghost}}">Confirmar</a>
+<a href="Regalos.dc.html" style="{{solid}}">Regalanos</a>
+</div>
+<section style="width: 100%; border: 1px solid {{ink}}; border-radius: 160px 160px 8px 8px; padding: 44px 20px 22px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px">
+<div style="font-family: 'Italiana', serif; font-size: 32px">Regalanos</div>
+<div style="font-size: 14px; font-style: italic; margin-bottom: 6px">un pedacito de la luna de miel</div>
+<a href="Regalos.dc.html" style="{{row}}"><span>Snorkel en Fernando de Noronha</span><span>$ 180.000</span></a>
+<a href="Regalos.dc.html" style="{{row}}"><span>Cena con los pies en la arena</span><span>$ 230.000</span></a>
+<a href="Regalos.dc.html" style="{{row}}"><span>Pasajes · compartido</span><span>55%</span></a>
+<div style="font-size: 12px; padding-top: 8px">En pesos · también en dólares</div>
+<a href="Regalos.dc.html" style="{{link}}">Ver todos</a>
+</section>
+<div style="font-size: 15px; line-height: 1.7">Ceremonia en la playa al atardecer<br>Vestimenta: lino, colores claros, sin tacos finos</div>
+</div>
+<div style="{{bar}}">
+<a href="#" style="{{ghost}}">Confirmar</a>
+<a href="Regalos.dc.html" style="{{solid}}">Regalanos</a>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"palette":{"editor":"enum","default":"Océano","options":["Océano","Arena","Coral","Salvia","Tinta"]},"$preview":{"width":390,"height":1400}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const P = { 'Océano': ['#F1F4F5', '#1F4E6E'], 'Arena': ['#F4EDE1', '#6A5236'], 'Coral': ['#FAF0EA', '#B4492F'], 'Salvia': ['#EEF1E8', '#46593F'], 'Tinta': ['#F7F4EC', '#2A2A26'] };
+    const [bg, ink] = P[this.props.palette] || P['Océano'];
+    const b = 'text-align: center; font-family: inherit; font-weight: 500; font-size: 15px; padding: 15px 6px; border-radius: 999px; text-decoration: none; ';
+    return {
+      ink,
+      root: 'width: 390px; height: 1400px; box-sizing: border-box; background: ' + bg + '; color: ' + ink + '; font-family: \'Karla\', sans-serif; position: relative; overflow: hidden',
+      ghost: b + 'border: 1px solid ' + ink + '; color: ' + ink + ';',
+      solid: b + 'background: ' + ink + '; color: ' + bg + ';',
+      row: 'display: flex; justify-content: space-between; gap: 10px; padding: 11px 0; border-bottom: 1px solid ' + ink + '33; font-size: 15px; text-align: left; text-decoration: none; color: ' + ink,
+      link: 'font-weight: 500; font-size: 14px; padding: 10px 0; color: ' + ink,
+      bar: 'position: absolute; left: 0; right: 0; bottom: 0; padding: 12px 16px 20px; background: ' + bg + '; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px'
+    };
+  }
+}
+</script>
+</body>
+</html>
